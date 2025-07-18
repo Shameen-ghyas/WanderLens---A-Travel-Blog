@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLens - Adventure/Outdoor Destinations</title>
+    <meta name="description" content="Explore top beach destinations like Santorini, Maldives, Bora Bora, and Bali. Plan your next beach adventure with our travel guides.">
+    <meta name="keywords" content="beach destinations, travel blog, Santorini, Maldives, Bora Bora, Bali, travel guide">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            background-image: url('https://images.pexels.com/photos/19442073/pexels-photo-19442073.jpeg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-content h1 {
+            font-size: 3.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hero-content p {
+            font-size: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+  
+        /* Scroll Down Arrow */
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+        /* Cards Section */
+    .cards-section {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-img-overlay {
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .card-title {
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 70vh;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            .destination-card img {
+                height: 150px;
+            }
+            .card-img-top {
+        height: 200px;
+      }
+      .card-title {
+        font-size: 1.2rem;
+      }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-text text-white text-center position-absolute top-50 start-50 translate-middle">
+      <h1 class="display-3 fw-bold animate__animated animate__fadeIn">Outdoor/Adventure Destinations</h1>
+      <p class="lead fw-bolder animate__animated animate__fadeIn animate__delay-1s">Where Limits Are Meant to Be Brokens</p>
+      <a href="../destinations.html" class="btn btn-primary btn-lg mt-3 fw-bold animate__animated animate__fadeIn animate__delay-2s">Back to Categories</a>
+    </div>
+        <a href="#cards-section" class="scroll-down">↓</a>
+    </section>
+
+  <!-- Culture & Heritage Cards -->
+  <section id="cards-section" class="cards-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Adventure/Outdoor Destinations</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <a href="destinations.html#varanasi" class="card text-decoration-none">
+            <img src="https://images.pexels.com/photos/30929529/pexels-photo-30929529.jpeg" class="card-img-top" alt="Queenstown, New Zealand">
+            <div class="card-img-overlay">
+              <h3 class="card-title">Queenstown, New Zealand</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="destinations.html#cairo" class="card text-decoration-none">
+            <img src="https://images.pexels.com/photos/32983311/pexels-photo-32983311.jpeg" class="card-img-top" alt="Interlaken, Switzerland">
+            <div class="card-img-overlay">
+              <h3 class="card-title">Interlaken, Switzerland</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="destinations.html#rome" class="card text-decoration-none">
+            <img src="https://images.pexels.com/photos/2414433/pexels-photo-2414433.jpeg" class="card-img-top" alt="Moab, Utah, USA">
+            <div class="card-img-overlay">
+              <h3 class="card-title">Moab, Utah, USA</h3>
+            </div>
+          </a>
+        </div>
+        <div class="col">
+          <a href="destinations.html#varanasi" class="card text-decoration-none">
+            <img src="https://images.unsplash.com/photo-1648670329793-e542dbe65bb7?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Hunza Valley, Pakistan">
+            <div class="card-img-overlay">
+              <h3 class="card-title">Hunza Valley, Pakistan</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  fetch('../navbar.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('header').innerHTML = data);
+  </script>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

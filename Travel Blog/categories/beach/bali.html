@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLens | Bali, Indonesia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #20c997;
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .hero-section {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url('https://images.pexels.com/photos/982673/pexels-photo-982673.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(45deg, #fff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .btn-hero {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 80px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-card img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .highlight-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .highlight-card .card-body {
+            padding: 25px;
+            background: white;
+        }
+
+        .highlight-card .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .gallery-container {
+            background: #f8f9fa;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .gallery-img {
+            border-radius: 15px;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .activities-section {
+            background: linear-gradient(135deg, #667eea 0%, #5e62a9 100%);
+            color: white;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .activity-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .activity-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .quick-facts {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-facts .list-group-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .tips-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .tip-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 20px 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-to-category {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-to-category:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 class="hero-title">Bali, Indonesia</h1>
+            <p class="hero-subtitle">Island of the Gods where spirituality and surf collide.</p>
+            <a href="#highlights"
+                class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
+                <i class="fas fa-chevron-down me-2"></i> Explore Bali
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/categories/beach.html">Beaches & Islands</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Bali</li>
+            </ol>
+        </nav>
+
+        <!-- Back to category -->
+        <div class="mb-4">
+            <a href="/categories/beach.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Beaches & Islands
+            </a>
+        </div>
+
+        <!-- Introduction -->
+        <section class="intro-section">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="section-title">About Bali</h2>
+                    <p class="lead fs-4 mb-4">Bali, Indonesia’s most famous island, is a tropical paradise blending
+                        serene landscapes, vibrant culture, and spiritual depth. From its emerald rice terraces and
+                        ancient temples to beach clubs and surf breaks, Bali has something for every type of traveler.
+                    </p>
+                    <p class="fs-5 mb-4">TThe island’s turquoise waters are protected by a coral reef, making it a
+                        paradise for snorkeling and marine adventures. Mount Otemanu, the remains of an extinct volcano,
+                        stands tall at the center and adds drama to the skyline.</p>
+                    <p class="fs-5">Located in the Indonesian archipelago, Bali is known for its unique blend of Hindu
+                        tradition, friendly locals, and breathtaking scenery. It’s home to stunning black and white sand
+                        beaches, volcanic mountains, lush jungles, and a rich artistic heritage.
+
+                        The island’s cultural heart lies in Ubud, where traditional dances, handicrafts, and sacred
+                        temples reflect Bali’s deep spiritual roots. In contrast, places like Canggu, Seminyak, and
+                        Uluwatu offer beachside luxury, surfing, and dynamic nightlife.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="quick-facts">
+                        <h5 class="mb-4 fs-3">Quick Facts</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Location:</strong> Indonesia, Southeast Asia</li>
+                            <li class="list-group-item"><strong>Best Time to Visit:</strong> April to October (dry
+                                season)</li>
+                            <li class="list-group-item"><strong>Famous For:</strong> Temples, surfing, rice terraces,
+                                spiritual retreats</li>
+                            <li class="list-group-item"><strong>Must-See:</strong> Ubud, Tegallalang Rice Terraces,
+                                Tanah Lot, Uluwatu Temple</li>
+                            <li class="list-group-item"><strong>Local Dish:</strong> Nasi Goreng, Satay, Babi Guling
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section id="highlights" class="content-section">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Highlights of Bali</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://images.unsplash.com/photo-1633820313053-fa030b13ef94?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Oia Village">
+                        <div class="card-body">
+                            <h5 class="card-title">Tegallalang Rice Terraces</h5>
+                            <p class="card-text"> A breathtaking expanse of tiered rice fields near Ubud that reflect
+                                Bali’s agricultural heritage.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://th.bing.com/th/id/R.f9ec86f038abe6649e3b533c0f5dfb00?rik=j22XS0NiOcW0nw&pid=ImgRaw&r=0"
+                            class="card-img-top" alt="Red Beach">
+                        <div class="card-body">
+                            <h5 class="card-title">Uluwatu Temple</h5>
+                            <p class="card-text">Perched on dramatic cliffs, this sea temple is perfect for watching
+                                sunsets and traditional Kecak fire dances.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.T2BnBUKzePFcMnKZaFO9dgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Santorini Sunset">
+                        <div class="card-body">
+                            <h5 class="card-title">Monkey Forest</h5>
+                            <p class="card-text">A natural sanctuary in Ubud home to hundreds of Balinese long-tailed
+                                macaques among ancient temple ruins.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Things to Do -->
+        <section class="activities-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title text-white">Top Things to Do</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                            <h5 class="activity-title"> Surfing in Kuta or Canggu</h5>
+                            <p> Catch waves on Bali’s world-renowned beaches, perfect for both beginners and pros.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-ship"></i>
+                            </div>
+                            <h5 class="activity-title"> Mount Batur Sunrise Hike</h5>
+                            <p>Trek up an active volcano before dawn and witness the sunrise over the island.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-wine-glass-alt"></i>
+                            </div>
+                            <h5 class="activity-title"> Balinese Massage & Spa</h5>
+                            <p>Indulge in affordable luxury with traditional massages and flower baths.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <h5 class="activity-title"> Attend a Balinese Ceremony</h5>
+                            <p>If you’re lucky, observe a colorful local festival with music, dance, and offerings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-container">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Bali Through the Lens</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://images.pexels.com/photos/695779/pexels-photo-695779.jpeg" class="img-fluid gallery-img"
+                            alt="Santorini Streets">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips -->
+        <section class="tips-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Travel Tips</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h5 class="mb-3">Best Time to Visit</h5>
+                            <p>Visit between April and October during Bali’s dry season. You’ll get the best weather for
+                                beach days, volcano hikes, and outdoor adventures. Avoid the monsoon-heavy months
+                                (November–March) unless you enjoy the green, moody vibe.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h5 class="mb-3">Getting Around</h5>
+                            <p>Renting a scooter is the cheapest and easiest way to explore. Always wear a helmet! For
+                                longer trips, use Grab/Gojek or hire a private driver for comfort and convenience.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <h5 class="mb-3">Where to Stay</h5>
+                            <p>Bali is Indonesia’s island gem, famous for its lush rice terraces, ancient temples,
+                                surf-friendly beaches, and spiritual energy. Whether you're hiking volcanoes, relaxing
+                                in beach clubs, or exploring Ubud’s culture and nature, Bali offers the perfect blend of
+                                adventure and serenity. From lively spots like Canggu and Seminyak to peaceful retreats
+                                in Ubud and Uluwatu, it's a paradise for every traveler.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h5 class="mb-3">Dining Tips</h5>
+                            <p>Taste the local Nasi Campur, Gado-Gado, and Lawar. Vegan and organic food lovers will
+                                feel at home in Ubud and Canggu. Tap water is not safe to drink — always go for bottled
+                                or filtered water.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.highlight-card, .activity-card, .tip-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Load header and footer
+        fetch('/navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        fetch('/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

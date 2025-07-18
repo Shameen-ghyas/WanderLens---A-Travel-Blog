@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLens | Caribbean Island</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #20c997;
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .hero-section {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1677608046896-ff8667284e89?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(45deg, #fff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .btn-hero {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 80px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-card img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .highlight-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .highlight-card .card-body {
+            padding: 25px;
+            background: white;
+        }
+
+        .highlight-card .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .gallery-container {
+            background: #f8f9fa;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .gallery-img {
+            border-radius: 15px;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .activities-section {
+            background: linear-gradient(135deg, #667eea 0%, #5e62a9 100%);
+            color: white;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .activity-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .activity-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .quick-facts {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-facts .list-group-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .tips-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .tip-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 20px 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-to-category {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-to-category:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 class="hero-title">Caribbean  Islands</h1>
+            <p class="hero-subtitle">Tropical rhythm, turquoise waters, and endless island charm.</p>
+            <a href="#highlights"
+                class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
+                <i class="fas fa-chevron-down me-2"></i> Explore Caribbean Islands
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/categories/beach.html">Beaches & Islands</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Caribbean Islands</li>
+            </ol>
+        </nav>
+
+        <!-- Back to category -->
+        <div class="mb-4">
+            <a href="/categories/beach.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Beaches & Islands
+            </a>
+        </div>
+
+        <!-- Introduction -->
+        <section class="intro-section">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="section-title">About Caribbean</h2>
+                    <p class="lead fs-4 mb-4">The Caribbean is a dazzling region comprising over 700 islands, islets, reefs, and cays scattered across the turquoise waters of the Atlantic Ocean. It’s celebrated for its white-sand beaches, vibrant coral reefs, warm tropical climate, and a laid-back rhythm that instantly puts travelers at ease. 
+                    </p>
+                    <p class="fs-5 mb-4">TThe island’s turquoise waters are protected by a coral reef, making it a
+                        paradise for snorkeling and marine adventures. Mount Otemanu, the remains of an extinct volcano,
+                        stands tall at the center and adds drama to the skyline.</p>
+                    <p class="fs-5">Beyond the beaches, the Caribbean is a cultural melting pot influenced by African, European, and Indigenous heritage,  reflected in its music, cuisine, and traditions.
+
+From the reggae beats of Jamaica to the luxurious overwater bungalows of St. Lucia, from the colonial charm of Puerto Rico to the carnival spirit of Trinidad and Tobago, every island offers a unique experience. Whether you're snorkeling with sea turtles in the Bahamas, hiking lush rainforests in Dominica, or savoring spicy jerk chicken in a beach shack, the Caribbean delivers both adventure and relaxation in equal measure.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="quick-facts">
+                        <h5 class="mb-4 fs-3">Quick Facts</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Location:</strong> Atlantic Ocean, southeast of the Gulf of Mexico</li>
+                            <li class="list-group-item"><strong>Best Time to Visit:</strong> December to April</li>
+                            <li class="list-group-item"><strong>Famous For:</strong> Beaches, island hopping, Caribbean music, tropical cuisine</li>
+                            <li class="list-group-item"><strong>Must-See:</strong> Jamaica, Bahamas, St. Lucia, Barbados, Dominican Republic</li>
+                            <li class="list-group-item"><strong>Local Dish:</strong> Jerk Chicken, Conch Fritters, Callaloo, Roti</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section id="highlights" class="content-section">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Highlights of Caribbean Islands</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://thehaphazardtraveler.com/wp-content/uploads/2023/06/Margaritaville-Beach-Resort-Nassau-768x613.jpg"
+                            class="card-img-top" alt="Oia Village">
+                        <div class="card-body">
+                            <h5 class="card-title">Bahamas Beaches</h5>
+                            <p class="card-text"> Powdery white sand and crystal-clear waters, perfect for relaxation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://images.pexels.com/photos/18003175/pexels-photo-18003175.jpeg"
+                            class="card-img-top" alt="Red Beach">
+                        <div class="card-body">
+                            <h5 class="card-title">Pitons of St. Lucia</h5>
+                            <p class="card-text">Towering volcanic spires rising from the sea, a UNESCO World Heritage site.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://th.bing.com/th/id/OIP.kVsXJ3YA2aajUrp8IU5h5gHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Santorini Sunset">
+                        <div class="card-body">
+                            <h5 class="card-title">Old San Juan, Puerto Rico</h5>
+                            <p class="card-text">Colonial streets, colorful buildings, and a lively cultural scene.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Things to Do -->
+        <section class="activities-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title text-white">Top Things to Do</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                            <h5 class="activity-title"> Snorkeling & Diving</h5>
+                            <p> Explore coral reefs, shipwrecks, and colorful marine life.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-ship"></i>
+                            </div>
+                            <h5 class="activity-title"> Island Hopping</h5>
+                            <p>Visit multiple islands in a single trip, each with its own flavor.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-wine-glass-alt"></i>
+                            </div>
+                            <h5 class="activity-title"> Reggae & Calypso Nights</h5>
+                            <p>Experience the soul of the Caribbean through its music and dance.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <h5 class="activity-title"> Sailing & Catamaran Cruises</h5>
+                            <p>Relax on a luxury boat with drinks and island views.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-container">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Caribbean Islands Through the Lens</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://images.pexels.com/photos/707377/pexels-photo-707377.jpeg" class="img-fluid gallery-img"
+                            alt="Santorini Streets">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://images.pexels.com/photos/5005126/pexels-photo-5005126.jpeg"
+                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://images.pexels.com/photos/2598675/pexels-photo-2598675.jpeg"
+                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips -->
+        <section class="tips-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Travel Tips</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h5 class="mb-3">Best Time to Visit</h5>
+                            <p>December to April offers sunny skies and less humidity, perfect for beach lovers</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h5 class="mb-3">Getting Around</h5>
+                            <p>Use ferries or local flights between islands; taxis and rental cars are ideal for exploring locally.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <h5 class="mb-3">Where to Stay</h5>
+                            <p>Resorts in Aruba, villas in St. Lucia, or all-inclusives in the Bahamas, the Caribbean offers a range of luxurious and budget-friendly options.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h5 class="mb-3">Dining Tips</h5>
+                            <p>Don’t miss local favorites like jerk chicken, seafood platters, and tropical fruits. Many beach shacks offer authentic flavors with stunning views.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.highlight-card, .activity-card, .tip-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Load header and footer
+        fetch('/navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        fetch('/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

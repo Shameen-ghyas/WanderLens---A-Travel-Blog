@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLens | Rome, Italy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #20c997;
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .hero-section {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url('https://images.pexels.com/photos/2225442/pexels-photo-2225442.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(45deg, #fff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        /* Scroll Down Arrow */
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .btn-hero {
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 123, 255, 0.4);
+            background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .intro-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 80px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight-card img {
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .highlight-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .highlight-card .card-body {
+            padding: 25px;
+            background: white;
+        }
+
+        .highlight-card .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .gallery-container {
+            background: #f8f9fa;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .gallery-img {
+            border-radius: 15px;
+            margin-bottom: 30px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .activities-section {
+            background: linear-gradient(135deg, #667eea 0%, #5e62a9 100%);
+            color: white;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .activity-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .activity-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .activity-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .quick-facts {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-facts .list-group-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .tips-section {
+            background: #f8f9fa;
+            padding: 80px 0;
+            margin: 50px 0;
+        }
+
+        .tip-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 20px 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-to-category {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-to-category:hover {
+            color: var(--primary-color);
+        }
+
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .intro-section {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 class="hero-title">Rome, Italy</h1>
+            <p class="hero-subtitle">The Eternal City of History, Art & Gelato</p>
+            <a href="#highlights"
+                class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
+                <i class="fas fa-chevron-down me-2"></i> Explore Rome
+            </a>
+
+        </div>
+        <a href="#highlights" class="scroll-down">↓</a>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/categories/culture.html">Culture & Heritage</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Rome</li>
+            </ol>
+        </nav>
+
+        <!-- Back to category -->
+        <div class="mb-4">
+            <a href="/categories/culture.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Culture & Heritage
+            </a>
+        </div>
+
+        <!-- Introduction -->
+        <section class="intro-section">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="section-title">The Eternal City</h2>
+<p class="lead fs-4 mb-4">Rome is a timeless blend of ancient ruins, Renaissance art, and buzzing piazzas.</p>
+<p class="fs-5 mb-4">Walk in the footsteps of emperors at the Colosseum, toss a coin into the Trevi Fountain, or sip espresso near the Pantheon — every corner of Rome breathes history and charm.</p>
+<p class="fs-5">Whether you're marveling at Michelangelo’s frescoes in the Vatican or savoring carbonara in Trastevere, Rome’s beauty is simply unforgettable.</p>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="quick-facts">
+                        <h5 class="mb-4 fs-3">Quick Facts</h5>
+                        <ul class="list-group list-group-flush">
+    <li class="list-group-item"><strong>Location:</strong> Italy, Southern Europe</li>
+    <li class="list-group-item"><strong>Best Time to Visit:</strong> April–June & September–October</li>
+    <li class="list-group-item"><strong>Must-See:</strong> Colosseum, Vatican City, Trevi Fountain</li>
+    <li class="list-group-item"><strong>Local Dish:</strong> Carbonara, Supplì, Gelato</li>
+    <li class="list-group-item"><strong>Iconic Experience:</strong> Sunset at the Spanish Steps</li>
+</ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights -->
+        <section id="highlights" class="content-section">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Cultural Highlights of Rome</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg"
+                            class="card-img-top" alt="mosque">
+                        <div class="card-body">
+                            <h5 class="card-title">Colosseum</h5>
+<p class="card-text">A 2,000-year-old amphitheater once used for gladiator battles, it remains Rome's most iconic landmark.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://images.unsplash.com/photo-1529260830199-42c24126f198?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Red Beach">
+                        <div class="card-body">
+                            <h5 class="card-title">Vatican City</h5>
+<p class="card-text">The world’s smallest country and home to St. Peter’s Basilica and the Sistine Chapel's frescoed ceilings.</p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="highlight-card">
+                        <img src="https://images.unsplash.com/photo-1525874684015-58379d421a52?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Santorini Sunset">
+                        <div class="card-body">
+                            <h5 class="card-title">Trevi Fountain</h5>
+<p class="card-text">Baroque masterpiece where visitors toss coins for good luck — and a guaranteed return to Rome.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Things to Do -->
+        <section class="activities-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title text-white">Top Things to Do</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="fact-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <h5>Ancient Ruins Tour</h5>
+<p>Explore the Roman Forum, Palatine Hill, and Pantheon to witness the remnants of a once-mighty empire.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="fact-icon">
+                                <i class="fas fa-church"></i>
+                            </div>
+                            <h5>Vatican Visit</h5>
+<p>Discover centuries of religious art, including Michelangelo’s famous frescoes inside the Sistine Chapel.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="fact-icon">
+                                <i class="fas fa-ice-cream"></i>
+                            </div>
+                            <h5>Pasta & Gelato Tasting</h5>
+<p>Indulge in authentic Roman dishes like carbonara and finish with creamy artisan gelato from local parlors.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="activity-card">
+                            <div class="fact-icon">
+                                <i class="fas fa-walking"></i>
+                            </div>
+                            <h5>Piazza Hopping</h5>
+<p>People-watch at Piazza Navona, toss coins in Trevi, and climb the Spanish Steps as you soak up city life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-container">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Rome Through the Lens</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.izvzqXt7R-iRiNdRd5NNeQHaE8?w=1500&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="img-fluid gallery-img" alt="Santorini Streets">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://th.bing.com/th?id=OIF.Xxq%2fP5q2otI0k%2frskHM8EA&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.5mH1bzVBkaK91TzXuHBqAgHaE8?w=800&h=534&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips -->
+        <section class="tips-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Travel Tips</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h5 class="mb-3">Best Time to Visit</h5>
+                            <p>Spring and early autumn are ideal for mild weather and fewer crowds. July–August can be hot and packed with tourists.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h5 class="mb-3">Getting Around</h5>
+                            <p>Rome is walkable. Use metro lines or buses for longer trips. Buy a Roma Pass for access to transport and sites.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <h5 class="mb-3">Where to Stay</h5>
+                            <p>Trastevere is trendy and charming. Centro Storico keeps you near main attractions. Vatican area is quieter but scenic.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h5 class="mb-3">Cultural Etiquettes</h5>
+                           <p>Dress respectfully at religious sites. Italians greet with handshakes. Avoid loud voices in public and tipping is appreciated but not mandatory.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.highlight-card, .activity-card, .tip-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Load header and footer
+        fetch('/navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        fetch('/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

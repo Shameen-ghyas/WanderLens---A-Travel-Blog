@@ -149,7 +149,7 @@
         });
 
         // Load header and footer with error handling
-        fetch('/navbar.html')
+        fetch('navbar.html')
             .then(res => {
                 if (!res.ok) throw new Error(`Failed to load navbar.html: ${res.status}`);
                 return res.text();
@@ -160,7 +160,7 @@
                 document.getElementById('header').innerHTML = '<div class="bg-danger text-white p-3 text-center">Error: Unable to load navbar. Check console for details.</div>';
             });
 
-        fetch('/footer.html')
+        fetch('footer.html')
             .then(res => {
                 if (!res.ok) throw new Error(`Failed to load footer.html: ${res.status}`);
                 return res.text();

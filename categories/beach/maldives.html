@@ -334,15 +334,15 @@
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="categories/beach.html">Beaches & Islands</a></li>
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/categories/beach.html">Beaches & Islands</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Maldives</li>
             </ol>
         </nav>
 
         <!-- Back to category -->
         <div class="mb-4">
-            <a href="categories/beach.html" class="back-to-category">
+            <a href="/categories/beach.html" class="back-to-category">
                 <i class="fas fa-arrow-left me-2"></i> Back to Beaches & Islands
             </a>
         </div>
@@ -578,11 +578,11 @@
         });
 
         // Load header and footer
-        fetch('../../navbar.html')
+        fetch('/navbar.html')
             .then(res => res.text())
             .then(data => document.getElementById('header').innerHTML = data);
 
-        fetch('../../footer.html')
+        fetch('/footer.html')
             .then(res => res.text())
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>

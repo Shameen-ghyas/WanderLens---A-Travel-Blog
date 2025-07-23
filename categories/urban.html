@@ -326,7 +326,7 @@
       <h2 class="text-center mb-5 fw-bold">Urban/Cities Destinations</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <a href="categories/urban/tokyo.html" class="card text-decoration-none">
+          <a href="/categories/urban/tokyo.html" class="card text-decoration-none">
             <img src="https://images.pexels.com/photos/32983930/pexels-photo-32983930.jpeg" class="card-img-top" alt="Tokyo, Japan">
             <div class="card-img-overlay">
               <h3 class="card-title">Tokyo, Japan</h3>
@@ -334,7 +334,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="categories/urban/nyc.html" class="card text-decoration-none">
+          <a href="/categories/urban/nyc.html" class="card text-decoration-none">
             <img src="https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg" class="card-img-top" alt="New York City, USA">
             <div class="card-img-overlay">
               <h3 class="card-title">New York City, USA</h3>
@@ -342,7 +342,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="categories/urban/london.html" class="card text-decoration-none">
+          <a href="/categories/urban/london.html" class="card text-decoration-none">
             <img src="https://images.pexels.com/photos/338454/pexels-photo-338454.jpeg" class="card-img-top" alt="London, England">
             <div class="card-img-overlay">
               <h3 class="card-title">London, England</h3>
@@ -350,7 +350,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="categories/urban/istanbul.html" class="card text-decoration-none">
+          <a href="/categories/urban/istanbul.html" class="card text-decoration-none">
             <img src="https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=698&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Istanbul, Turkey">
             <div class="card-img-overlay">
               <h3 class="card-title">Istanbul, Turkey</h3>
@@ -358,7 +358,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="categories/urban/barcelona.html" class="card text-decoration-none">
+          <a href="/categories/urban/barcelona.html" class="card text-decoration-none">
             <img src="https://images.pexels.com/photos/18957041/pexels-photo-18957041.jpeg" class="card-img-top" alt="Barcelona, Spain">
             <div class="card-img-overlay">
               <h3 class="card-title">Barcelona, Spain</h3>
@@ -370,10 +370,10 @@
   </section>
   <div id="footer"></div>
   <script>
-  fetch('../navbar.html')
+  fetch('/navbar.html')
     .then(res => res.text())
     .then(data => document.getElementById('header').innerHTML = data);
-    fetch('../footer.html')
+    fetch('/footer.html')
     .then(res => res.text())
     .then(data => document.getElementById('footer').innerHTML = data);
   </script>

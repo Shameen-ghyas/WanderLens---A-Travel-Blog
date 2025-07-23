@@ -319,7 +319,7 @@
       <h2 class="text-center mb-5 fw-bold">Geographic Wonders</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <a href="categories/geographic/salar-de-uyuni.html" class="card text-decoration-none">
+          <a href="/categories/geographic/salar-de-uyuni.html" class="card text-decoration-none">
             <img src="https://images.pexels.com/photos/30929529/pexels-photo-30929529.jpeg" class="card-img-top" alt="Salar de Uyuni, Bolivia">
             <div class="card-img-overlay">
               <h3 class="card-title">Salar de Uyuni, Bolivia</h3>
@@ -327,7 +327,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="categories/geographic/antelope.html" class="card text-decoration-none">
+          <a href="/categories/geographic/antelope.html" class="card text-decoration-none">
             <img src="https://images.pexels.com/photos/32983311/pexels-photo-32983311.jpeg" class="card-img-top" alt="Antelope Canyon, Arizona, USA">
             <div class="card-img-overlay">
               <h3 class="card-title">Antelope Canyon, Arizona, USA</h3>
@@ -335,7 +335,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="categories/geographic/fairy-meadows.html" class="card text-decoration-none">
+          <a href="/categories/geographic/fairy-meadows.html" class="card text-decoration-none">
             <img src="https://images.pexels.com/photos/2414433/pexels-photo-2414433.jpeg" class="card-img-top" alt="Fairy Meadows, Pakistan">
             <div class="card-img-overlay">
               <h3 class="card-title">Fairy Meadows, Pakistan</h3>
@@ -343,7 +343,7 @@
           </a>
         </div>
         <div class="col">
-          <a href="categories/geographic/capadoccia.html" class="card text-decoration-none">
+          <a href="/categories/geographic/capadoccia.html" class="card text-decoration-none">
             <img src="https://images.unsplash.com/photo-1648670329793-e542dbe65bb7?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Cappadocia, Turkey">
             <div class="card-img-overlay">
               <h3 class="card-title">Cappadocia, Turkey</h3>
@@ -356,10 +356,10 @@
   </section>
   <div id="footer"></div>
   <script>
-  fetch('../navbar.html')
+  fetch('/navbar.html')
     .then(res => res.text())
     .then(data => document.getElementById('header').innerHTML = data);
-    fetch('../footer.html')
+    fetch('/footer.html')
     .then(res => res.text())
     .then(data => document.getElementById('footer').innerHTML = data);
   </script>

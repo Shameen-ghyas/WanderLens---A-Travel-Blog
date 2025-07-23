@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLens | Cairo, Egypt</title>
+    <title>WanderLens | Fez, Morocco</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
@@ -32,7 +32,7 @@
             height: 100vh;
             min-height: 700px;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-                url('https://images.pexels.com/photos/15127306/pexels-photo-15127306.jpeg');
+                url('https://images.pexels.com/photos/943510/pexels-photo-943510.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -300,6 +300,17 @@
             color: var(--primary-color);
         }
 
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
         @media (max-width: 768px) {
             .hero-title {
@@ -331,13 +342,12 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content animate__animated animate__fadeIn">
-            <h1 class="hero-title"> Cairo, Egypt</h1>
-            <p class="hero-subtitle">History, Hustle, and the Heart of the Nile</p>
+            <h1 class="hero-title">Fez, Morocco</h1>
+            <p class="hero-subtitle">The Spiritual Capital of Morocco & Medieval Wonder</p>
             <a href="#highlights"
                 class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
-                <i class="fas fa-chevron-down me-2"></i> Explore Cairo
+                <i class="fas fa-chevron-down me-2"></i> Explore Fez
             </a>
-
         </div>
         <a href="#highlights" class="scroll-down">↓</a>
     </section>
@@ -349,7 +359,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
                 <li class="breadcrumb-item"><a href="/categories/culture.html">Culture & Heritage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cairo</li>
+                <li class="breadcrumb-item active" aria-current="page">Fez</li>
             </ol>
         </nav>
 
@@ -364,23 +374,21 @@
         <section class="intro-section">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">The Timeless Heart of Egypt</h2>
-<p class="lead fs-4 mb-4">Cairo, where ancient pyramids meet vibrant street life, is a dynamic fusion of history and energy.</p>
-<p class="fs-5 mb-4">From the Great Pyramids of Giza to the treasures of the Egyptian Museum, Cairo is a gateway to one of the world's oldest civilizations. The city's bustling markets, Islamic architecture, and Nile-side cafés offer a captivating blend of old and new.</p>
-<p class="fs-5">Wander through Khan El-Khalili bazaar, witness the call to prayer echoing through medieval minarets, and savor dishes like koshari and grilled kofta.</p>
-
+                    <h2 class="section-title">The Ancient Heart of Morocco</h2>
+                    <p class="lead fs-4 mb-4">Fez el-Bali, one of the world's largest car-free urban zones, stands as a living testament to medieval Islamic architecture and culture.</p>
+                    <p class="fs-5 mb-4">Founded in the 9th century, Fez has been Morocco's spiritual and intellectual center for over a millennium. Its medina is a UNESCO World Heritage Site where narrow alleyways lead to hidden palaces, ancient madrasas, and the world's oldest continuously operating university.</p>
+                    <p class="fs-5">The city's famous tanneries have been dyeing leather using traditional methods for centuries, while artisans continue to create exquisite ceramics, textiles, and metalwork in workshops that have remained unchanged for generations.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="quick-facts">
                         <h5 class="mb-4 fs-3">Quick Facts</h5>
-<ul class="list-group list-group-flush">
-    <li class="list-group-item"><strong>Location:</strong> Egypt, North Africa</li>
-    <li class="list-group-item"><strong>Best Time to Visit:</strong> October–April</li>
-    <li class="list-group-item"><strong>Must-See:</strong> Giza Pyramids, Egyptian Museum, Islamic Cairo</li>
-    <li class="list-group-item"><strong>Local Dish:</strong> Koshari, Ful Medames, Kofta</li>
-    <li class="list-group-item"><strong>Iconic Experience:</strong> Sunset cruise on the Nile</li>
-</ul>
-
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Location:</strong> Morocco, North Africa</li>
+                            <li class="list-group-item"><strong>Best Time to Visit:</strong> March-May, September-November</li>
+                            <li class="list-group-item"><strong>Must-See:</strong> Fez el-Bali, Chouara Tannery, Al-Qarawiyyin</li>
+                            <li class="list-group-item"><strong>Local Dish:</strong> Pastilla, Tagine, Mint Tea</li>
+                            <li class="list-group-item"><strong>Iconic Experience:</strong> Getting lost in the medina</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -389,40 +397,36 @@
         <!-- Highlights -->
         <section id="highlights" class="content-section">
             <div class="text-center mb-5">
-                <h2 class="section-title">Cultural Highlights of Cairo</h2>
+                <h2 class="section-title">Cultural Highlights of Fez</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://images.pexels.com/photos/3772630/pexels-photo-3772630.jpeg"
-                            class="card-img-top" alt="mosque">
+                        <img src="https://www.fodors.com/wp-content/uploads/2019/06/shutterstock_14345080460-1600x1068.jpg"
+                            class="card-img-top" alt="Fez Medina">
                         <div class="card-body">
-                           <h5 class="card-title">Pyramids of Giza</h5>
-<p class="card-text">One of the Seven Wonders of the Ancient World, these colossal tombs date back to 2600 BC and still captivate visitors today.</p>
-
+                            <h5 class="card-title">Fez el-Bali Medina</h5>
+                            <p class="card-text">The world's largest car-free urban zone, a labyrinthine medieval city with over 9,000 streets and alleys dating back to the 9th century.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://th.bing.com/th/id/R.224d4eadbac199819bb2672b4da35fa3?rik=E44%2fOotbyyKdaw&pid=ImgRaw&r=0"
-                            class="card-img-top" alt="Red Beach">
+                        <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Chouara Tannery">
                         <div class="card-body">
-                            <h5 class="card-title">Egyptian Museum</h5>
-<p class="card-text">Home to the world's largest collection of Pharaonic antiquities, including the golden mask of Tutankhamun.</p>
-
-
+                            <h5 class="card-title">Chouara Tannery</h5>
+                            <p class="card-text">The famous leather tannery with colorful vats where traditional leather dyeing methods have been preserved for over 1,000 years.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://cairoegypttours.com/wp-content/uploads/2022/03/Khan-Al-Khalily.jpg"
-                            class="card-img-top" alt="Santorini Sunset">
+                        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            class="card-img-top" alt="Al-Qarawiyyin University">
                         <div class="card-body">
-                            <h5 class="card-title">Khan El-Khalili Bazaar</h5>
-<p class="card-text">A centuries-old souk filled with spices, jewelry, souvenirs, and artisans selling traditional crafts.</p>
-
+                            <h5 class="card-title">Al-Qarawiyyin University</h5>
+                            <p class="card-text">Founded in 859 AD, recognized by UNESCO as the world's oldest continuously operating degree-granting university.</p>
                         </div>
                     </div>
                 </div>
@@ -438,43 +442,39 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-    <div class="fact-icon">
-        <i class="fas fa-ship"></i>
-    </div>
-    <h5>Nile Cruise</h5>
-    <p>Enjoy a scenic sunset boat ride with live music and traditional dance performances along the Nile River.</p>
-</div>
-
+                            <div class="activity-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h5 class="activity-title">Artisan Workshops</h5>
+                            <p>Visit traditional craftsmen creating ceramics, carpets, and metalwork using techniques passed down through generations.</p>
+                        </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-    <div class="fact-icon">
-        <i class="fas fa-cross"></i>
-    </div>
-    <h5>Coptic Cairo</h5>
-    <p>Explore ancient churches, including the Hanging Church, reflecting Egypt’s Christian heritage.</p>
-</div>
-
+                            <div class="activity-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h5 class="activity-title">Nejjarine Fountain</h5>
+                            <p>Admire the beautifully carved 18th-century fountain and visit the nearby Museum of Wooden Arts & Crafts.</p>
+                        </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-    <div class="fact-icon">
-        <i class="fas fa-mosque"></i>
-    </div>
-    <h5>Islamic Cairo</h5>
-    <p>Wander through historic mosques, madrassas, and winding alleys rich with Islamic art and architecture.</p>
-</div>
-
+                            <div class="activity-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h5 class="activity-title">Culinary Tours</h5>
+                            <p>Taste authentic Moroccan pastilla, slow-cooked tagines, and sip traditional mint tea in historic riads.</p>
+                        </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-    <div class="fact-icon">
-        <i class="fas fa-utensils"></i>
-    </div>
-    <h5>Street Food Tour</h5>
-    <p>Sample local favorites like falafel, shawarma, and freshly baked baladi bread from Cairo’s roadside stalls.</p>
-</div>
-
+                            <div class="activity-icon">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                            <h5 class="activity-title">Souk Shopping</h5>
+                            <p>Navigate the bustling souks for handwoven rugs, leather goods, spices, and traditional Moroccan lanterns.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -484,20 +484,20 @@
         <section class="gallery-container">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Cairo Through the Lens</h2>
+                    <h2 class="section-title">Fez Through the Lens</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="https://tse4.mm.bing.net/th/id/OIP.pxvxM_pPBEWlfODOgNUnOgHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"
-                            class="img-fluid gallery-img" alt="Santorini Streets">
+                        <img src="https://images.pexels.com/photos/32128760/pexels-photo-32128760.jpeg"
+                            class="img-fluid gallery-img" alt="Fez Architecture">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://images.pexels.com/photos/631339/pexels-photo-631339.jpeg"
-                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                        <img src="https://images.pexels.com/photos/32880214/pexels-photo-32880214.jpeg"
+                            class="img-fluid gallery-img" alt="Moroccan Tiles">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://tse4.mm.bing.net/th/id/OIP.Z9fKBxKTOoxOkTxMKMk55AHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
-                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                        <img src="https://images.pexels.com/photos/33071130/pexels-photo-33071130.jpeg"
+                            class="img-fluid gallery-img" alt="Fez Pottery">
                     </div>
                 </div>
             </div>
@@ -516,38 +516,34 @@
                                 <i class="fas fa-calendar-alt"></i>
                             </div>
                             <h5 class="mb-3">Best Time to Visit</h5>
-                            <p>October to April offers comfortable temperatures. Summer (June–August) can be extremely hot, often over 40°C.</p>
-
+                            <p>March-May and September-November offer ideal weather (18-25°C). Summer can be very hot (35°C+), while winter nights can be cold. Spring brings beautiful weather for exploring.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-map-marked-alt"></i>
+                                <i class="fas fa-compass"></i>
                             </div>
-                            <h5 class="mb-3">Getting Around</h5>
-                            <p>Use ride-sharing apps or the Cairo Metro. Taxis are affordable, but negotiate fares. Walking is best in Old Cairo.</p>
-
+                            <h5 class="mb-3">Navigating the Medina</h5>
+                            <p>Hire a local guide for your first visit. Download offline maps and carry a power bank. Getting "lost" is part of the experience - most paths lead to main squares.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hotel"></i>
+                                <i class="fas fa-bed"></i>
                             </div>
                             <h5 class="mb-3">Where to Stay</h5>
-                            <p>Zamalek and Garden City offer scenic Nile views and international hotels. For history lovers, stay near Tahrir Square.</p>
-
+                            <p>Traditional riads offer authentic experiences within the medina. For modern amenities, stay in Ville Nouvelle. Book medina accommodations with clear directions.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hands-helping"></i>
+                                <i class="fas fa-handshake"></i>
                             </div>
-                            <h5 class="mb-3">Cultural Etiquettes</h5>
-                            <p>Dress conservatively. Respect local customs during prayer times and Ramadan. Always ask before taking photos of locals.</p>
-
+                            <h5 class="mb-3">Cultural Etiquette</h5>
+                            <p>Dress conservatively, especially in religious areas. Learn basic Arabic greetings. Bargaining is expected in souks. Always ask before photographing people.</p>
                         </div>
                     </div>
                 </div>

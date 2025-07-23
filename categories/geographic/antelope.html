@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLens | Lahore, Pakistan</title>
+    <title>WanderLens | Antelope Canyon, Arizona</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
@@ -32,7 +32,7 @@
             height: 100vh;
             min-height: 700px;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-                url('https://images.pexels.com/photos/2383832/pexels-photo-2383832.jpeg');
+                url('https://images.pexels.com/photos/1533512/pexels-photo-1533512.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -300,6 +300,17 @@
             color: var(--primary-color);
         }
 
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
         @media (max-width: 768px) {
             .hero-title {
@@ -331,13 +342,12 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content animate__animated animate__fadeIn">
-            <h1 class="hero-title">Lahore, Pakistan</h1>
-            <p class="hero-subtitle">The Heart of Mughal Heritage & Cultural Grandeur</p>
+            <h1 class="hero-title">Antelope Canyon</h1>
+            <p class="hero-subtitle">Arizona's Ethereal Slot Canyon & Cathedral of Light</p>
             <a href="#highlights"
                 class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
-                <i class="fas fa-chevron-down me-2"></i> Explore Lahore
+                <i class="fas fa-chevron-down me-2"></i> Explore the Canyon
             </a>
-
         </div>
         <a href="#highlights" class="scroll-down">↓</a>
     </section>
@@ -348,15 +358,15 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="/categories/culture.html">Culture & Heritage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Lahore</li>
+                <li class="breadcrumb-item"><a href="/categories/geo.html">Geographic Wonders</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Antelope Canyon</li>
             </ol>
         </nav>
 
         <!-- Back to category -->
         <div class="mb-4">
-            <a href="/categories/culture.html" class="back-to-category">
-                <i class="fas fa-arrow-left me-2"></i> Back to Culture & Heritage
+            <a href="/categories/geo.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Geographic Wonders
             </a>
         </div>
 
@@ -364,28 +374,20 @@
         <section class="intro-section">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">The Cultural Capital of Pakistan</h2>
-                    <p class="lead fs-4 mb-4">Lahore, the soul of Pakistan, is a living museum of Mughal architecture,
-                        Sufi shrines, and colonial-era buildings..</p>
-                    <p class="fs-5 mb-4">With a history spanning over a millennium, Lahore has been the cultural heart
-                        of the Punjab region. From the grandeur of Badshahi Mosque to the vibrant colors of Heera
-                        Mandi's bazaars, the city offers an intoxicating blend of history, art, and culinary traditions
-                    </p>
-                    <p class="fs-5">Known as the "City of Gardens" for its many Mughal-era gardens, Lahore's food scene
-                        is equally legendary - from sizzling kebabs to the sweet richness of falooda.</p>
+                    <h2 class="section-title">Nature's Cathedral of Light</h2>
+                    <p class="lead fs-4 mb-4">Antelope Canyon is one of the world's most photographed slot canyons, where ethereal light beams dance through narrow sandstone passages carved by millennia of flash floods.</p>
+                    <p class="fs-5 mb-4">Located on Navajo Nation land near Page, Arizona, this natural wonder consists of two separate sections: Upper Antelope Canyon (Tsé bighánílíní) and Lower Antelope Canyon (Hazdistazí), each offering unique perspectives of flowing sandstone walls.</p>
+                    <p class="fs-5">The canyon's famous light beams occur when sunlight filters through the narrow opening above, creating mystical shafts of light that illuminate the sculpted walls in shades of orange, purple, and gold.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="quick-facts">
                         <h5 class="mb-4 fs-3">Quick Facts</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Location:</strong> Pakistan, South Asia</li>
-                            <li class="list-group-item"><strong>Best Time to Visit:</strong> October-March</li>
-
-                            <li class="list-group-item"><strong>Must-See:</strong> Badshahi Mosque, Lahore Fort, Walled
-                                City</li>
-                            <li class="list-group-item"><strong>Local Dish:</strong> Nihari, Paye, Lahori Chargha
-                            </li>
-                            <li class="list-group-item">Iconic Experience:</strong> Food Street at Gawalmandi</li>
+                            <li class="list-group-item"><strong>Location:</strong> Page, Arizona, USA</li>
+                            <li class="list-group-item"><strong>Best Time for Light Beams:</strong> March-October, 11am-2pm</li>
+                            <li class="list-group-item"><strong>Canyon Depth:</strong> Up to 120 feet (37m)</li>
+                            <li class="list-group-item"><strong>Access:</strong> Guided tours only (Navajo Nation)</li>
+                            <li class="list-group-item"><strong>Iconic Experience:</strong> Ethereal light beam photography</li>
                         </ul>
                     </div>
                 </div>
@@ -395,40 +397,36 @@
         <!-- Highlights -->
         <section id="highlights" class="content-section">
             <div class="text-center mb-5">
-                <h2 class="section-title">Cultural Highlights of Lahore</h2>
+                <h2 class="section-title">Wonders of Antelope Canyon</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://images.pexels.com/photos/12912453/pexels-photo-12912453.jpeg"
-                            class="card-img-top" alt="mosque">
+                        <img src="https://tse1.explicit.bing.net/th/id/OIP.PPTO2l-e_bmpxyIw_XH6bgHaEo?w=760&h=475&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Light Beams">
                         <div class="card-body">
-                            <h5 class="card-title">Badshahi Mosque</h5>
-                            <p class="card-text">One of the largest mosques in the world, built in 1673 by Emperor
-                                Aurangzeb, capable of holding 100,000 worshippers.</p>
+                            <h5 class="card-title">Mystical Light Beams</h5>
+                            <p class="card-text">During midday hours, ethereal shafts of sunlight penetrate the narrow canyon opening, creating dramatic beams that illuminate the sculpted sandstone walls.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://th.bing.com/th/id/R.c595b940adcd9c10fd955bed206d655f?rik=ZjZiDff77YSdVA&riu=http%3a%2f%2fwww.thehistoryhub.com%2fwp-content%2fuploads%2f2014%2f05%2fLahore-Fort-Photos.jpg&ehk=5V%2b3iREc0GpchRWYKal9jira8sLCIXH59dzejX5NZdw%3d&risl=&pid=ImgRaw&r=0"
-                            class="card-img-top" alt="Red Beach">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.7BuX3E8RvQRvxHjKGKJ-QQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Sandstone Walls">
                         <div class="card-body">
-                            <h5 class="card-title">Lahore Fort</h5>
-                            <p class="card-text">A UNESCO World Heritage Site with stunning Mughal architecture
-                                including the iconic Sheesh Mahal (Mirror Palace).</p>
-
+                            <h5 class="card-title">Flowing Sandstone Walls</h5>
+                            <p class="card-text">Millions of years of flash flood erosion have carved smooth, wave-like formations in the Navajo sandstone, creating an otherworldly underground landscape.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/12/image-17122019-d.jpg"
-                            class="card-img-top" alt="Santorini Sunset">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.UmKtEn8mhpqwHA2DVwV4_gHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Upper vs Lower Canyon">
                         <div class="card-body">
-                            <h5 class="card-title">Wagah Border Ceremony</h5>
-                            <p class="card-text">The daily military ceremony at the India-Pakistan border, a spectacle
-                                of patriotic fervor and cultural pride.</p>
+                            <h5 class="card-title">Upper vs Lower Canyon</h5>
+                            <p class="card-text">Upper Canyon offers easier access and famous light beams, while Lower Canyon features more adventurous ladders and unique "corkscrew" formations.</p>
                         </div>
                     </div>
                 </div>
@@ -439,47 +437,43 @@
         <section class="activities-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title text-white">Top Things to Do</h2>
+                    <h2 class="section-title text-white">Canyon Experiences</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-theater-masks"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-camera-retro"></i>
                             </div>
-                            <h5>Festivals</h5>
-                            <p>Experience Basant (kite festival) or the Lahore Literary Festival showcasing regional
-                                arts.</p>
+                            <h5 class="activity-title">Photography Tours</h5>
+                            <p>Specialized tours for capturing the perfect light beam shots with tripods and extended time for composition.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-mosque"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-hiking"></i>
                             </div>
-                            <h5>Sufi Shrines</h5>
-                            <p>Visit Data Darbar, one of South Asia's largest Sufi shrines, especially magical during
-                                Thursday night qawwali.</p>
+                            <h5 class="activity-title">Guided Canyon Tours</h5>
+                            <p>Expert Navajo guides share geological history and cultural significance while navigating the narrow passages.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-utensils"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-eye"></i>
                             </div>
-                            <h5 class="activity-title">Food Tours</h5>
-                            <p>Explore the legendary food streets of Gawalmandi and Anarkali, tasting Lahori chargha,
-                                nihari, and paye.</p>
+                            <h5 class="activity-title">Light Beam Viewing</h5>
+                            <p>Prime viewing times from late morning to early afternoon when sun angle creates the most dramatic light shafts.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-shopping-bag"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-feather-alt"></i>
                             </div>
-                            <h5>Bazaars</h5>
-                            <p>Get lost in the colors of Anarkali Bazaar, home to traditional crafts, textiles, and
-                                Mughal-era jewelry.</p>
+                            <h5 class="activity-title">Cultural Learning</h5>
+                            <p>Learn about Navajo traditions and the spiritual significance of this sacred site from indigenous guides.</p>
                         </div>
                     </div>
                 </div>
@@ -490,20 +484,20 @@
         <section class="gallery-container">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Lahore Through the Lens</h2>
+                    <h2 class="section-title">Canyon Through the Lens</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="https://images.pexels.com/photos/2734406/pexels-photo-2734406.jpeg"
-                            class="img-fluid gallery-img" alt="Santorini Streets">
+                        <img src="https://i0.wp.com/grizzleemartin.com/wp-content/uploads/2015/04/antelope-canyon-page-arizona-light-and-color-abstract-photography-by-grizzlee-martin-23.jpg"
+                            class="img-fluid gallery-img" alt="Canyon colors">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://th.bing.com/th/id/R.38f439df3a26778a96a1a0dfcc8c134c?rik=6QeMkt6NVHhqwQ&pid=ImgRaw&r=0"
-                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.SEYaL4_VoF5W__jYEX7PugHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="img-fluid gallery-img" alt="Sandstone Textures">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.aHBG4W-mWK-KEjTxojMhVAHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"
-                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                        <img src="https://th.bing.com/th/id/R.90dfa14ebb4fc55e3a67ccb65bcdaf57?rik=QVMBWvnO%2bjzKGw&pid=ImgRaw&r=0"
+                            class="img-fluid gallery-img" alt="Canyon light rays">
                     </div>
                 </div>
             </div>
@@ -513,56 +507,49 @@
         <section class="tips-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Travel Tips</h2>
+                    <h2 class="section-title">Visitor Guidelines</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-calendar-alt"></i>
+                                <i class="fas fa-ticket-alt"></i>
                             </div>
-                            <h5 class="mb-3">Best Time to Visit</h5>
-                            <p>October to March offers pleasant weather (15-25°C). Avoid May-June when temperatures
-                                exceed 40°C. Spring (Feb-Mar) is magical during Basant festival.</p>
+                            <h5 class="mb-3">Booking & Reservations</h5>
+                            <p>Book tours well in advance, especially for peak season (March-October). Photography tours require special permits and cost more but allow tripods and longer stays.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-map-marked-alt"></i>
+                                <i class="fas fa-sun"></i>
                             </div>
-                            <h5 class="mb-3">Getting Around</h5>
-                            <p>Use ride-hailing apps (Careem, Uber) or yellow taxis. The Metro Bus covers major routes.
-                                For the Walled City, walking tours are best.</p>
+                            <h5 class="mb-3">Best Light Conditions</h5>
+                            <p>Light beams are most visible from late morning to early afternoon (11am-2pm) during summer months. Winter has fewer but still spectacular light shows.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-lg-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <h5 class="mb-3">What to Wear</h5>
+                            <p>Wear closed-toe shoes with good grip. Avoid loose clothing or hats that could fall. Bring layers as canyon temperatures differ from surface.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hotel"></i>
+                                <i class="fas fa-exclamation-triangle"></i>
                             </div>
-                            <h5 class="mb-3">Where to Stay</h5>
-                            <p>The Mall Road area offers colonial-era luxury hotels. Gulberg has modern options. For
-                                authenticity, consider boutique hotels in the Old City.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="tip-card">
-                            <div class="tip-icon">
-                                <i class="fas fa-hands-helping"></i>
-                            </div>
-                            <h5 class="mb-3">Cultural Etiquettes</h5>
-                            <p>Dress modestly, especially at religious sites. Remove shoes before entering mosques.
-                                Always ask permission before photographing people.</p>
+                            <h5 class="mb-3">Safety Considerations</h5>
+                            <p>Tours may be cancelled due to flash flood risk. Follow all guide instructions. Bring water and be prepared for sand particles. Respect this sacred Navajo site.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    
-
-   
 
     <div id="footer"></div>
 

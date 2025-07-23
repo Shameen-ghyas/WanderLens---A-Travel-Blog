@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLens | Lahore, Pakistan</title>
+    <title>WanderLens | Salar de Uyuni, Bolivia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
@@ -32,7 +32,7 @@
             height: 100vh;
             min-height: 700px;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-                url('https://images.pexels.com/photos/2383832/pexels-photo-2383832.jpeg');
+                url('https://images.pexels.com/photos/17507607/pexels-photo-17507607.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -300,6 +300,17 @@
             color: var(--primary-color);
         }
 
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
         @media (max-width: 768px) {
             .hero-title {
@@ -331,13 +342,12 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content animate__animated animate__fadeIn">
-            <h1 class="hero-title">Lahore, Pakistan</h1>
-            <p class="hero-subtitle">The Heart of Mughal Heritage & Cultural Grandeur</p>
+            <h1 class="hero-title">Salar de Uyuni</h1>
+            <p class="hero-subtitle">Bolivia's Mirror of the Sky & World's Largest Salt Flat</p>
             <a href="#highlights"
                 class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
-                <i class="fas fa-chevron-down me-2"></i> Explore Lahore
+                <i class="fas fa-chevron-down me-2"></i> Explore Uyuni
             </a>
-
         </div>
         <a href="#highlights" class="scroll-down">↓</a>
     </section>
@@ -348,15 +358,15 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="/categories/culture.html">Culture & Heritage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Lahore</li>
+                <li class="breadcrumb-item"><a href="/categories/geo.html">Geographic Wonders</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Salar de Uyuni</li>
             </ol>
         </nav>
 
         <!-- Back to category -->
         <div class="mb-4">
-            <a href="/categories/culture.html" class="back-to-category">
-                <i class="fas fa-arrow-left me-2"></i> Back to Culture & Heritage
+            <a href="/categories/geo.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Geographic Wonders
             </a>
         </div>
 
@@ -364,28 +374,20 @@
         <section class="intro-section">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">The Cultural Capital of Pakistan</h2>
-                    <p class="lead fs-4 mb-4">Lahore, the soul of Pakistan, is a living museum of Mughal architecture,
-                        Sufi shrines, and colonial-era buildings..</p>
-                    <p class="fs-5 mb-4">With a history spanning over a millennium, Lahore has been the cultural heart
-                        of the Punjab region. From the grandeur of Badshahi Mosque to the vibrant colors of Heera
-                        Mandi's bazaars, the city offers an intoxicating blend of history, art, and culinary traditions
-                    </p>
-                    <p class="fs-5">Known as the "City of Gardens" for its many Mughal-era gardens, Lahore's food scene
-                        is equally legendary - from sizzling kebabs to the sweet richness of falooda.</p>
+                    <h2 class="section-title">The World's Largest Salt Flat</h2>
+                    <p class="lead fs-4 mb-4">Stretching over 10,000 square kilometers, Salar de Uyuni is a surreal landscape that transforms between seasons, creating one of Earth's most spectacular natural phenomena.</p>
+                    <p class="fs-5 mb-4">During the dry season, the salt flat becomes a pristine white desert with perfect hexagonal patterns, while the rainy season transforms it into the world's largest mirror, reflecting the sky so perfectly that the horizon disappears entirely.</p>
+                    <p class="fs-5">This otherworldly landscape sits at 3,656 meters above sea level and contains over 10 billion tons of salt, along with significant reserves of lithium that power modern technology around the globe.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="quick-facts">
                         <h5 class="mb-4 fs-3">Quick Facts</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Location:</strong> Pakistan, South Asia</li>
-                            <li class="list-group-item"><strong>Best Time to Visit:</strong> October-March</li>
-
-                            <li class="list-group-item"><strong>Must-See:</strong> Badshahi Mosque, Lahore Fort, Walled
-                                City</li>
-                            <li class="list-group-item"><strong>Local Dish:</strong> Nihari, Paye, Lahori Chargha
-                            </li>
-                            <li class="list-group-item">Iconic Experience:</strong> Food Street at Gawalmandi</li>
+                            <li class="list-group-item"><strong>Location:</strong> Potosí Department, Bolivia</li>
+                            <li class="list-group-item"><strong>Best Time to Visit:</strong> Dry: May-October, Wet: December-April</li>
+                            <li class="list-group-item"><strong>Size:</strong> 10,582 km² (4,086 sq mi)</li>
+                            <li class="list-group-item"><strong>Elevation:</strong> 3,656 meters (11,995 ft)</li>
+                            <li class="list-group-item"><strong>Iconic Experience:</strong> Mirror effect during rainy season</li>
                         </ul>
                     </div>
                 </div>
@@ -395,40 +397,36 @@
         <!-- Highlights -->
         <section id="highlights" class="content-section">
             <div class="text-center mb-5">
-                <h2 class="section-title">Cultural Highlights of Lahore</h2>
+                <h2 class="section-title">Natural Wonders of Salar de Uyuni</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://images.pexels.com/photos/12912453/pexels-photo-12912453.jpeg"
-                            class="card-img-top" alt="mosque">
+                        <img src="https://images.pexels.com/photos/30929499/pexels-photo-30929499.jpeg"
+                            class="card-img-top" alt="Mirror Effect">
                         <div class="card-body">
-                            <h5 class="card-title">Badshahi Mosque</h5>
-                            <p class="card-text">One of the largest mosques in the world, built in 1673 by Emperor
-                                Aurangzeb, capable of holding 100,000 worshippers.</p>
+                            <h5 class="card-title">Mirror of the Sky</h5>
+                            <p class="card-text">During rainy season, a thin layer of water creates perfect reflections, making the salt flat appear like an endless mirror stretching to the horizon.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://th.bing.com/th/id/R.c595b940adcd9c10fd955bed206d655f?rik=ZjZiDff77YSdVA&riu=http%3a%2f%2fwww.thehistoryhub.com%2fwp-content%2fuploads%2f2014%2f05%2fLahore-Fort-Photos.jpg&ehk=5V%2b3iREc0GpchRWYKal9jira8sLCIXH59dzejX5NZdw%3d&risl=&pid=ImgRaw&r=0"
-                            class="card-img-top" alt="Red Beach">
+                        <img src="https://www.touristsecrets.com/wp-content/uploads/2024/09/secrets-beneath-the-salt-flats-1727057741.jpg"
+                            class="card-img-top" alt="Salt Polygons">
                         <div class="card-body">
-                            <h5 class="card-title">Lahore Fort</h5>
-                            <p class="card-text">A UNESCO World Heritage Site with stunning Mughal architecture
-                                including the iconic Sheesh Mahal (Mirror Palace).</p>
-
+                            <h5 class="card-title">Hexagonal Salt Patterns</h5>
+                            <p class="card-text">The dry season reveals intricate hexagonal salt polygons formed by evaporation and crystallization, creating a natural geometric masterpiece.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/12/image-17122019-d.jpg"
-                            class="card-img-top" alt="Santorini Sunset">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.qlj9IBvVYrXgwACgH4wRUgHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Incahuasi Island">
                         <div class="card-body">
-                            <h5 class="card-title">Wagah Border Ceremony</h5>
-                            <p class="card-text">The daily military ceremony at the India-Pakistan border, a spectacle
-                                of patriotic fervor and cultural pride.</p>
+                            <h5 class="card-title">Incahuasi Island</h5>
+                            <p class="card-text">A rocky outcrop in the salt flat covered with ancient giant cacti, some over 1,200 years old, offering panoramic views of the endless white expanse.</p>
                         </div>
                     </div>
                 </div>
@@ -439,47 +437,43 @@
         <section class="activities-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title text-white">Top Things to Do</h2>
+                    <h2 class="section-title text-white">Unforgettable Experiences</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-theater-masks"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-camera"></i>
                             </div>
-                            <h5>Festivals</h5>
-                            <p>Experience Basant (kite festival) or the Lahore Literary Festival showcasing regional
-                                arts.</p>
+                            <h5 class="activity-title">Photography Tours</h5>
+                            <p>Capture perspective-bending photos and stunning sunrise/sunset reflections in this photographer's paradise.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-mosque"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-star"></i>
                             </div>
-                            <h5>Sufi Shrines</h5>
-                            <p>Visit Data Darbar, one of South Asia's largest Sufi shrines, especially magical during
-                                Thursday night qawwali.</p>
+                            <h5 class="activity-title">Stargazing</h5>
+                            <p>Experience some of the world's clearest night skies at high altitude with minimal light pollution.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-utensils"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-fire"></i>
                             </div>
-                            <h5 class="activity-title">Food Tours</h5>
-                            <p>Explore the legendary food streets of Gawalmandi and Anarkali, tasting Lahori chargha,
-                                nihari, and paye.</p>
+                            <h5 class="activity-title">Flamingo Watching</h5>
+                            <p>Visit nearby colored lagoons to see thousands of pink flamingos feeding in mineral-rich waters.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-shopping-bag"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-mountain"></i>
                             </div>
-                            <h5>Bazaars</h5>
-                            <p>Get lost in the colors of Anarkali Bazaar, home to traditional crafts, textiles, and
-                                Mughal-era jewelry.</p>
+                            <h5 class="activity-title">Multi-day Tours</h5>
+                            <p>Explore the Eduardo Avaroa Reserve with geysers, hot springs, and otherworldly rock formations.</p>
                         </div>
                     </div>
                 </div>
@@ -490,20 +484,20 @@
         <section class="gallery-container">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Lahore Through the Lens</h2>
+                    <h2 class="section-title">Uyuni Through the Lens</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="https://images.pexels.com/photos/2734406/pexels-photo-2734406.jpeg"
-                            class="img-fluid gallery-img" alt="Santorini Streets">
+                        <img src="https://images.pexels.com/photos/2613112/pexels-photo-2613112.jpeg"
+                            class="img-fluid gallery-img" alt="Salt Flat Sunset">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://th.bing.com/th/id/R.38f439df3a26778a96a1a0dfcc8c134c?rik=6QeMkt6NVHhqwQ&pid=ImgRaw&r=0"
-                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                        <img src="https://images.pexels.com/photos/16625573/pexels-photo-16625573.jpeg"
+                            class="img-fluid gallery-img" alt="Pink Flamingos">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.aHBG4W-mWK-KEjTxojMhVAHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"
-                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                        <img src="https://images.pexels.com/photos/9390001/pexels-photo-9390001.jpeg"
+                            class="img-fluid gallery-img" alt="Train Cemetery">
                     </div>
                 </div>
             </div>
@@ -513,56 +507,49 @@
         <section class="tips-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Travel Tips</h2>
+                    <h2 class="section-title">Essential Travel Tips</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-calendar-alt"></i>
+                                <i class="fas fa-cloud-sun"></i>
                             </div>
-                            <h5 class="mb-3">Best Time to Visit</h5>
-                            <p>October to March offers pleasant weather (15-25°C). Avoid May-June when temperatures
-                                exceed 40°C. Spring (Feb-Mar) is magical during Basant festival.</p>
+                            <h5 class="mb-3">Seasonal Planning</h5>
+                            <p>Dry season (May-October): Clear hexagonal patterns, cooler temperatures, better for driving. Wet season (December-April): Mirror effect, warmer weather, limited access to some areas.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-map-marked-alt"></i>
+                                <i class="fas fa-mountain"></i>
                             </div>
-                            <h5 class="mb-3">Getting Around</h5>
-                            <p>Use ride-hailing apps (Careem, Uber) or yellow taxis. The Metro Bus covers major routes.
-                                For the Walled City, walking tours are best.</p>
+                            <h5 class="mb-3">Altitude Preparation</h5>
+                            <p>At 3,656m elevation, acclimatize in La Paz first. Stay hydrated, avoid alcohol, and consider altitude sickness medication. Pack warm clothes for cold nights.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hotel"></i>
+                                <i class="fas fa-camera"></i>
                             </div>
-                            <h5 class="mb-3">Where to Stay</h5>
-                            <p>The Mall Road area offers colonial-era luxury hotels. Gulberg has modern options. For
-                                authenticity, consider boutique hotels in the Old City.</p>
+                            <h5 class="mb-3">Photography Essentials</h5>
+                            <p>Bring extra batteries (cold drains them fast), lens cloths for salt spray, polarizing filter, and waterproof gear. The bright white surface can damage cameras.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hands-helping"></i>
+                                <i class="fas fa-shield-alt"></i>
                             </div>
-                            <h5 class="mb-3">Cultural Etiquettes</h5>
-                            <p>Dress modestly, especially at religious sites. Remove shoes before entering mosques.
-                                Always ask permission before photographing people.</p>
+                            <h5 class="mb-3">Health & Safety</h5>
+                            <p>Wear high SPF sunscreen and sunglasses (snow blindness risk). Pack first aid kit, water purification tablets, and inform someone of your itinerary. Join reputable tours.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    
-
-   
 
     <div id="footer"></div>
 

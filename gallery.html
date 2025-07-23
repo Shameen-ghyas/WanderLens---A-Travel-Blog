@@ -1,11 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLens - Gallery</title>
+    <title>WanderLens | Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #20c997;
+            --text-dark: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        .hero-section {
+            height: 80vh;
+            min-height: 600px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+                url('https://images.locationscout.net/2018/09/old-porvoo-finland.jpg?h=1100&q=83');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(45deg, #fff, #e3f2fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+            color: var(--text-dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+
+        .gallery-container {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 20px;
+            padding: 0 15px;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 20px;
+            break-inside: avoid;
+            position: relative;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            display: block;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-top: 10px;
+            padding: 0 10px;
+            width: 100%;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            padding: 20px 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .back-to-home {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .back-to-home:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 992px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .gallery-container {
+                padding: 50px 0;
+            }
+
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Coming Soon..</h1>
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 class="hero-title">WanderLens Gallery</h1>
+            <p class="hero-subtitle">A Visual Journey Through the World's Most Stunning Destinations and Cuisines</p>
+        </div>
+        <a href="#gallery" class="scroll-down">↓</a>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+            </ol>
+        </nav>
+
+        <!-- Back to home -->
+        <div class="mb-4">
+            <a href="/index.html" class="back-to-home">
+                <i class="fas fa-arrow-left me-2"></i> Back to Home
+            </a>
+        </div>
+
+        <!-- Destinations Gallery -->
+        <section id="gallery" class="gallery-container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Destinations</h2>
+            </div>
+            <div class="masonry-grid animate__animated animate__fadeInUp">
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/OSK.HERO6T65bkZacvPFGc3AlhQGw8tRq452f5n5YSxsKWrtP8Y?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Badshahi Mosque, Lahore">
+                        <img src="https://th.bing.com/th/id/OSK.HERO6T65bkZacvPFGc3AlhQGw8tRq452f5n5YSxsKWrtP8Y?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Lahore">
+                    </a>
+                    <div class="gallery-caption">Lahore, Pakistan</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/R.b15af0a944722fd8c45304aa72dca7dc?rik=CYBzlbIF1NdZgQ&pid=ImgRaw&r=0" data-lightbox="gallery" data-title="Fairy Meadows">
+                        <img src="https://th.bing.com/th/id/R.b15af0a944722fd8c45304aa72dca7dc?rik=CYBzlbIF1NdZgQ&pid=ImgRaw&r=0" class="gallery-img" alt="Fairy Meadows">
+                    </a>
+                    <div class="gallery-caption">Fairy Meadows, Pakistan</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse3.mm.bing.net/th/id/OIP.wwHv65PWCMRTUbMQsqjFswHaE7?w=1600&h=1066&rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Antelope Canyon">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.wwHv65PWCMRTUbMQsqjFswHaE7?w=1600&h=1066&rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Antelope Canyon">
+                    </a>
+                    <div class="gallery-caption">Antelope Canyon, USA</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse4.mm.bing.net/th/id/OIP.C9P3D_qs75jib3Vh0IfrUAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Maldives">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.C9P3D_qs75jib3Vh0IfrUAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Maldives">
+                    </a>
+                    <div class="gallery-caption">Maldives</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse2.mm.bing.net/th/id/OIP.JlMvzEJRPUBKthvfXBXAdQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Bali">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.JlMvzEJRPUBKthvfXBXAdQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Bali">
+                    </a>
+                    <div class="gallery-caption">Bali, Indonesia</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/R.4eefda8d8cad5a0fba00f315775c3419?rik=FjEBSuLl5IpVjg&pid=ImgRaw&r=0" data-lightbox="gallery" data-title="Santorini">
+                        <img src="https://th.bing.com/th/id/R.4eefda8d8cad5a0fba00f315775c3419?rik=FjEBSuLl5IpVjg&pid=ImgRaw&r=0" class="gallery-img" alt="Santorini">
+                    </a>
+                    <div class="gallery-caption">Santorini, Greece</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse4.mm.bing.net/th/id/OIP.rqkaFAp4X0d3755FlX_04wHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Bora Bora">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.rqkaFAp4X0d3755FlX_04wHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Bora Bora">
+                    </a>
+                    <div class="gallery-caption">Bora Bora, French Polynesia</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/OSK.HEROvkRhlHmp1PX5z8MXt4G2tW-lYq6ad-cT-k0WKZrSQG8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Caribbean">
+                        <img src="https://th.bing.com/th/id/OSK.HEROvkRhlHmp1PX5z8MXt4G2tW-lYq6ad-cT-k0WKZrSQG8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Caribbean">
+                    </a>
+                    <div class="gallery-caption">Caribbean</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/R.42fb23b2ec5dc640e30897d285c97093?rik=FdNdJV9jnQDFrQ&pid=ImgRaw&r=0" data-lightbox="gallery" data-title="Kyoto">
+                        <img src="https://th.bing.com/th/id/R.42fb23b2ec5dc640e30897d285c97093?rik=FdNdJV9jnQDFrQ&pid=ImgRaw&r=0" class="gallery-img" alt="Kyoto">
+                    </a>
+                    <div class="gallery-caption">Kyoto, Japan</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse2.mm.bing.net/th/id/OIF.qAkwV7I4XYH6F89mhsYLwA?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Tokyo">
+                        <img src="https://tse2.mm.bing.net/th/id/OIF.qAkwV7I4XYH6F89mhsYLwA?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Tokyo">
+                    </a>
+                    <div class="gallery-caption">Tokyo, Japan</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/R.90020294bf03a14452c7fb0474f3c0f3?rik=RnalYcx30UHWyQ&riu=http%3a%2f%2ffestivaltravelegypt.com%2fwp-content%2fuploads%2f2018%2f10%2fCairo-Egypt.jpg&ehk=JAsgSZhgegkrgQXEp1ASXOUuNGHOcg1i%2b%2fYmhOTsnVc%3d&risl=&pid=ImgRaw&r=0" data-lightbox="gallery" data-title="Cairo">
+                        <img src="https://th.bing.com/th/id/R.90020294bf03a14452c7fb0474f3c0f3?rik=RnalYcx30UHWyQ&riu=http%3a%2f%2ffestivaltravelegypt.com%2fwp-content%2fuploads%2f2018%2f10%2fCairo-Egypt.jpg&ehk=JAsgSZhgegkrgQXEp1ASXOUuNGHOcg1i%2b%2fYmhOTsnVc%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Cairo">
+                    </a>
+                    <div class="gallery-caption">Cairo, Egypt</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/R.6b04e0e615cc8a1d94bb33ecaae73ff3?rik=GAAscmtmfazPsQ&riu=http%3a%2f%2fimages.trvl-media.com%2fmedia%2fcontent%2fshared%2fimages%2ftravelguides%2fdestination%2f179899%2fRome-100628.jpg&ehk=qlWSUSw5r9xd9vK1MJXRm2rzCHA%2foAd5efP%2f2JaSqq0%3d&risl=&pid=ImgRaw&r=0" data-lightbox="gallery" data-title="Rome">
+                        <img src="https://th.bing.com/th/id/R.6b04e0e615cc8a1d94bb33ecaae73ff3?rik=GAAscmtmfazPsQ&riu=http%3a%2f%2fimages.trvl-media.com%2fmedia%2fcontent%2fshared%2fimages%2ftravelguides%2fdestination%2f179899%2fRome-100628.jpg&ehk=qlWSUSw5r9xd9vK1MJXRm2rzCHA%2foAd5efP%2f2JaSqq0%3d&risl=&pid=ImgRaw&r=0" class="gallery-img" alt="Rome">
+                    </a>
+                    <div class="gallery-caption">Rome, Italy</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse1.mm.bing.net/th/id/OIP.LzJPeQtFX5Xv7K_P9AscAQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Cusco">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.LzJPeQtFX5Xv7K_P9AscAQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Cusco">
+                    </a>
+                    <div class="gallery-caption">Cusco, Peru</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.tripsavvy.com/thmb/w9EDCn38xTx5CrixZ_HUQ3IRlW4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-522194919-59a3b60cd963ac00118052d8.jpg" data-lightbox="gallery" data-title="Fez">
+                        <img src="https://www.tripsavvy.com/thmb/w9EDCn38xTx5CrixZ_HUQ3IRlW4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-522194919-59a3b60cd963ac00118052d8.jpg" class="gallery-img" alt="Fez">
+                    </a>
+                    <div class="gallery-caption">Fez, Morocco</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://visitcappadocia.net/wp-content/uploads/2023/02/autumn-in-cappadocia-2021-09-17-23-53-57-utc-1.jpg" data-lightbox="gallery" data-title="Cappadocia">
+                        <img src="https://visitcappadocia.net/wp-content/uploads/2023/02/autumn-in-cappadocia-2021-09-17-23-53-57-utc-1.jpg" class="gallery-img" alt="Cappadocia">
+                    </a>
+                    <div class="gallery-caption">Cappadocia, Turkey</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://theplanetd.com/images/Facts-About-Bolivia.jpg" data-lightbox="gallery" data-title="Salar de Uyuni">
+                        <img src="https://theplanetd.com/images/Facts-About-Bolivia.jpg" class="gallery-img" alt="Salar de Uyuni">
+                    </a>
+                    <div class="gallery-caption">Salar de Uyuni, Bolivia</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/R.8fbb5c7ac509a65a2245834e6a83be37?rik=wHAKWOShe7uyrg&pid=ImgRaw&r=0" data-lightbox="gallery" data-title="Queenstown">
+                        <img src="https://th.bing.com/th/id/R.8fbb5c7ac509a65a2245834e6a83be37?rik=wHAKWOShe7uyrg&pid=ImgRaw&r=0" class="gallery-img" alt="Queenstown">
+                    </a>
+                    <div class="gallery-caption">Queenstown, New Zealand</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse1.mm.bing.net/th/id/OIP.6sTgT7hMlb5CV0kZvf5U6QHaEL?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Interlaken">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.6sTgT7hMlb5CV0kZvf5U6QHaEL?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Interlaken">
+                    </a>
+                    <div class="gallery-caption">Interlaken, Switzerland</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://th.bing.com/th/id/R.5f61070672428ef251e8e566c926ac9e?rik=RR%2bJXYD1Gp9Umw&pid=ImgRaw&r=0" data-lightbox="gallery" data-title="Moab">
+                        <img src="https://th.bing.com/th/id/R.5f61070672428ef251e8e566c926ac9e?rik=RR%2bJXYD1Gp9Umw&pid=ImgRaw&r=0" class="gallery-img" alt="Moab">
+                    </a>
+                    <div class="gallery-caption">Moab, USA</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse4.mm.bing.net/th/id/OIP.9Uic_DVx6HlNZq8uf5UxYwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Hunza Valley">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.9Uic_DVx6HlNZq8uf5UxYwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Hunza Valley">
+                    </a>
+                    <div class="gallery-caption">Hunza Valley, Pakistan</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse3.mm.bing.net/th/id/OIP.AxwOISV7b93_9U226JnH_wHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="New York">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.AxwOISV7b93_9U226JnH_wHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="New York">
+                    </a>
+                    <div class="gallery-caption">New York, USA</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse2.mm.bing.net/th/id/OIP.SRwD12Tuejvt9pyAwn8hRgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="London">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.SRwD12Tuejvt9pyAwn8hRgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="London">
+                    </a>
+                    <div class="gallery-caption">London, UK</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse1.mm.bing.net/th/id/OIP.I1a1_5y7o_2vn5zQzwfoEAHaD5?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Istanbul">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.I1a1_5y7o_2vn5zQzwfoEAHaD5?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Istanbul">
+                    </a>
+                    <div class="gallery-caption">Istanbul, Turkey</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Gallery -->
+        <section class="gallery-container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Culinary Delights</h2>
+            </div>
+            <div class="masonry-grid animate__animated animate__fadeInUp">
+                <div class="gallery-item">
+                    <a href="https://tse3.mm.bing.net/th/id/OIP.0j3gWWGQRdpWH7fB18sY_QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Street Food, Bangkok">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.0j3gWWGQRdpWH7fB18sY_QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Bangkok Food">
+                    </a>
+                    <div class="gallery-caption">Bangkok, Thailand</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse2.mm.bing.net/th/id/OIP.DGBhbZyFpD7mBvb9p6qJvAHaE6?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Biryani, Lahore">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.DGBhbZyFpD7mBvb9p6qJvAHaE6?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="Lahore Food">
+                    </a>
+                    <div class="gallery-caption">Lahore, Pakistan</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://www.ourescapeclause.com/wp-content/uploads/2018/04/TurkishBreakfast-7-1024x682.jpg" data-lightbox="gallery" data-title="Kebabs, Istanbul">
+                        <img src="https://www.ourescapeclause.com/wp-content/uploads/2018/04/TurkishBreakfast-7-1024x682.jpg" class="gallery-img" alt="Istanbul Food">
+                    </a>
+                    <div class="gallery-caption">Istanbul, Turkey</div>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://tse1.mm.bing.net/th/id/OIP.hvJzafGGsNNUNmKh1wbqSgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" data-lightbox="gallery" data-title="Pintxos, San Sebastian">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.hvJzafGGsNNUNmKh1wbqSgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" class="gallery-img" alt="San Sebastian Food">
+                    </a>
+                    <div class="gallery-caption">San Sebastian, Spain</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            observer.observe(item);
+        });
+
+        // Load header and footer
+        fetch('/navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        fetch('/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+        // Lightbox configuration
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'alwaysShowNavOnTouchDevices': true
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

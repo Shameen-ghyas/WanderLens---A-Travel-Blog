@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLens | Lahore, Pakistan</title>
+    <title>WanderLens | Moab, Utah, USA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
@@ -32,7 +32,7 @@
             height: 100vh;
             min-height: 700px;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-                url('https://images.pexels.com/photos/2383832/pexels-photo-2383832.jpeg');
+                url('https://images.pexels.com/photos/12533380/pexels-photo-12533380.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -300,6 +300,17 @@
             color: var(--primary-color);
         }
 
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
         @media (max-width: 768px) {
             .hero-title {
@@ -324,20 +335,18 @@
         }
     </style>
 </head>
-
 <body>
     <div id="header"></div>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content animate__animated animate__fadeIn">
-            <h1 class="hero-title">Lahore, Pakistan</h1>
-            <p class="hero-subtitle">The Heart of Mughal Heritage & Cultural Grandeur</p>
+            <h1 class="hero-title">Moab</h1>
+            <p class="hero-subtitle">Utah's Red Rock Adventure Capital</p>
             <a href="#highlights"
                 class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
-                <i class="fas fa-chevron-down me-2"></i> Explore Lahore
+                <i class="fas fa-chevron-down me-2"></i> Explore Moab
             </a>
-
         </div>
         <a href="#highlights" class="scroll-down">↓</a>
     </section>
@@ -348,15 +357,15 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="/categories/culture.html">Culture & Heritage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Lahore</li>
+                <li class="breadcrumb-item"><a href="/categories/outdoor.html">Adventure & Outdoor</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Moab</li>
             </ol>
         </nav>
 
         <!-- Back to category -->
         <div class="mb-4">
-            <a href="/categories/culture.html" class="back-to-category">
-                <i class="fas fa-arrow-left me-2"></i> Back to Culture & Heritage
+            <a href="/categories/outdoor.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Adventure & Outdoor
             </a>
         </div>
 
@@ -364,28 +373,20 @@
         <section class="intro-section">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">The Cultural Capital of Pakistan</h2>
-                    <p class="lead fs-4 mb-4">Lahore, the soul of Pakistan, is a living museum of Mughal architecture,
-                        Sufi shrines, and colonial-era buildings..</p>
-                    <p class="fs-5 mb-4">With a history spanning over a millennium, Lahore has been the cultural heart
-                        of the Punjab region. From the grandeur of Badshahi Mosque to the vibrant colors of Heera
-                        Mandi's bazaars, the city offers an intoxicating blend of history, art, and culinary traditions
-                    </p>
-                    <p class="fs-5">Known as the "City of Gardens" for its many Mughal-era gardens, Lahore's food scene
-                        is equally legendary - from sizzling kebabs to the sweet richness of falooda.</p>
+                    <h2 class="section-title">Gateway to Canyon Country</h2>
+                    <p class="lead fs-4 mb-4">Nestled between Arches and Canyonlands National Parks, Moab is the ultimate playground for desert adventurers, with its towering red rock formations, winding canyons, and the mighty Colorado River.</p>
+                    <p class="fs-5 mb-4">This small Utah town has become world-famous for its mountain biking trails, off-roading routes, and breathtaking national park scenery. The contrast of fiery red rocks against deep blue skies creates a landscape that feels both otherworldly and profoundly ancient.</p>
+                    <p class="fs-5">From sunrise at Delicate Arch to sunset over Dead Horse Point, Moab offers endless opportunities for adventure and awe-inspiring moments in nature.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="quick-facts">
                         <h5 class="mb-4 fs-3">Quick Facts</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Location:</strong> Pakistan, South Asia</li>
-                            <li class="list-group-item"><strong>Best Time to Visit:</strong> October-March</li>
-
-                            <li class="list-group-item"><strong>Must-See:</strong> Badshahi Mosque, Lahore Fort, Walled
-                                City</li>
-                            <li class="list-group-item"><strong>Local Dish:</strong> Nihari, Paye, Lahori Chargha
-                            </li>
-                            <li class="list-group-item">Iconic Experience:</strong> Food Street at Gawalmandi</li>
+                            <li class="list-group-item"><strong>Location:</strong> Eastern Utah, USA</li>
+                            <li class="list-group-item"><strong>Best Time to Visit:</strong> March-May & Sept-Oct</li>
+                            <li class="list-group-item"><strong>Elevation:</strong> 4,025 ft (1,227 m)</li>
+                            <li class="list-group-item"><strong>Famous For:</strong> Arches NP, mountain biking, jeep trails</li>
+                            <li class="list-group-item"><strong>Iconic Landmark:</strong> Delicate Arch</li>
                         </ul>
                     </div>
                 </div>
@@ -395,40 +396,36 @@
         <!-- Highlights -->
         <section id="highlights" class="content-section">
             <div class="text-center mb-5">
-                <h2 class="section-title">Cultural Highlights of Lahore</h2>
+                <h2 class="section-title">Moab Adventures</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://images.pexels.com/photos/12912453/pexels-photo-12912453.jpeg"
-                            class="card-img-top" alt="mosque">
+                        <img src="https://images.pexels.com/photos/31350274/pexels-photo-31350274.jpeg"
+                            class="card-img-top" alt="Arches National Park">
                         <div class="card-body">
-                            <h5 class="card-title">Badshahi Mosque</h5>
-                            <p class="card-text">One of the largest mosques in the world, built in 1673 by Emperor
-                                Aurangzeb, capable of holding 100,000 worshippers.</p>
+                            <h5 class="card-title">Arches National Park</h5>
+                            <p class="card-text">Explore over 2,000 natural sandstone arches including the iconic Delicate Arch and Landscape Arch.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://th.bing.com/th/id/R.c595b940adcd9c10fd955bed206d655f?rik=ZjZiDff77YSdVA&riu=http%3a%2f%2fwww.thehistoryhub.com%2fwp-content%2fuploads%2f2014%2f05%2fLahore-Fort-Photos.jpg&ehk=5V%2b3iREc0GpchRWYKal9jira8sLCIXH59dzejX5NZdw%3d&risl=&pid=ImgRaw&r=0"
-                            class="card-img-top" alt="Red Beach">
+                        <img src="https://images.pexels.com/photos/3232619/pexels-photo-3232619.jpeg"
+                            class="card-img-top" alt="Mountain Biking">
                         <div class="card-body">
-                            <h5 class="card-title">Lahore Fort</h5>
-                            <p class="card-text">A UNESCO World Heritage Site with stunning Mughal architecture
-                                including the iconic Sheesh Mahal (Mirror Palace).</p>
-
+                            <h5 class="card-title">Mountain Biking</h5>
+                            <p class="card-text">Ride world-famous trails like Slickrock and Porcupine Rim with stunning desert vistas.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/12/image-17122019-d.jpg"
-                            class="card-img-top" alt="Santorini Sunset">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.f2XVKsRKUpADeTYNr-RxIQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Colorado River">
                         <div class="card-body">
-                            <h5 class="card-title">Wagah Border Ceremony</h5>
-                            <p class="card-text">The daily military ceremony at the India-Pakistan border, a spectacle
-                                of patriotic fervor and cultural pride.</p>
+                            <h5 class="card-title">Colorado River</h5>
+                            <p class="card-text">Raft through Westwater Canyon or kayak the calm stretches near town.</p>
                         </div>
                     </div>
                 </div>
@@ -439,47 +436,43 @@
         <section class="activities-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title text-white">Top Things to Do</h2>
+                    <h2 class="section-title text-white">Desert Activities</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-theater-masks"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-hiking"></i>
                             </div>
-                            <h5>Festivals</h5>
-                            <p>Experience Basant (kite festival) or the Lahore Literary Festival showcasing regional
-                                arts.</p>
+                            <h5 class="activity-title">Hiking</h5>
+                            <p>Trek to Delicate Arch, explore Fiery Furnace, or discover hidden gems in Canyonlands.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-mosque"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-car"></i>
                             </div>
-                            <h5>Sufi Shrines</h5>
-                            <p>Visit Data Darbar, one of South Asia's largest Sufi shrines, especially magical during
-                                Thursday night qawwali.</p>
+                            <h5 class="activity-title">4x4 Off-Roading</h5>
+                            <p>Conquer legendary trails like Hell's Revenge and Poison Spider Mesa.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-utensils"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-camera"></i>
                             </div>
-                            <h5 class="activity-title">Food Tours</h5>
-                            <p>Explore the legendary food streets of Gawalmandi and Anarkali, tasting Lahori chargha,
-                                nihari, and paye.</p>
+                            <h5 class="activity-title">Photography</h5>
+                            <p>Capture stunning red rock formations at golden hour and under starry skies.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-shopping-bag"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-water"></i>
                             </div>
-                            <h5>Bazaars</h5>
-                            <p>Get lost in the colors of Anarkali Bazaar, home to traditional crafts, textiles, and
-                                Mughal-era jewelry.</p>
+                            <h5 class="activity-title">Canyoneering</h5>
+                            <p>Rappel into slot canyons and discover hidden water pockets in the desert.</p>
                         </div>
                     </div>
                 </div>
@@ -490,20 +483,20 @@
         <section class="gallery-container">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Lahore Through the Lens</h2>
+                    <h2 class="section-title">Moab Through My Lens</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="https://images.pexels.com/photos/2734406/pexels-photo-2734406.jpeg"
-                            class="img-fluid gallery-img" alt="Santorini Streets">
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            class="img-fluid gallery-img" alt="Arches NP">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://th.bing.com/th/id/R.38f439df3a26778a96a1a0dfcc8c134c?rik=6QeMkt6NVHhqwQ&pid=ImgRaw&r=0"
-                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                        <img src="https://images.pexels.com/photos/449003/pexels-photo-449003.jpeg"
+                            class="img-fluid gallery-img" alt="Mountain Biking">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.aHBG4W-mWK-KEjTxojMhVAHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"
-                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                        <img src="https://images.pexels.com/photos/3279885/pexels-photo-3279885.jpeg"
+                            class="img-fluid gallery-img" alt="Colorado River">
                     </div>
                 </div>
             </div>
@@ -513,17 +506,34 @@
         <section class="tips-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Travel Tips</h2>
+                    <h2 class="section-title">Essential Travel Tips</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-calendar-alt"></i>
+                                <i class="fas fa-sun"></i>
                             </div>
-                            <h5 class="mb-3">Best Time to Visit</h5>
-                            <p>October to March offers pleasant weather (15-25°C). Avoid May-June when temperatures
-                                exceed 40°C. Spring (Feb-Mar) is magical during Basant festival.</p>
+                            <h5 class="mb-3">Weather & Timing</h5>
+                            <p>Spring and fall offer ideal temperatures. Summer can exceed 100°F - hike early and carry 3L+ water per person. Winter brings cool days and occasional snow.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <h5 class="mb-3">Park Reservations</h5>
+                            <p>Arches requires timed entry tickets April-Oct. Arrive before 6am or after 4pm to avoid crowds at popular trails.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h5 class="mb-3">Local Eats</h5>
+                            <p>Try the Moab Brewery, Quesadilla Mobilla food truck, and Milt's Stop & Eat for classic burgers and shakes.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
@@ -531,38 +541,14 @@
                             <div class="tip-icon">
                                 <i class="fas fa-map-marked-alt"></i>
                             </div>
-                            <h5 class="mb-3">Getting Around</h5>
-                            <p>Use ride-hailing apps (Careem, Uber) or yellow taxis. The Metro Bus covers major routes.
-                                For the Walled City, walking tours are best.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="tip-card">
-                            <div class="tip-icon">
-                                <i class="fas fa-hotel"></i>
-                            </div>
-                            <h5 class="mb-3">Where to Stay</h5>
-                            <p>The Mall Road area offers colonial-era luxury hotels. Gulberg has modern options. For
-                                authenticity, consider boutique hotels in the Old City.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="tip-card">
-                            <div class="tip-icon">
-                                <i class="fas fa-hands-helping"></i>
-                            </div>
-                            <h5 class="mb-3">Cultural Etiquettes</h5>
-                            <p>Dress modestly, especially at religious sites. Remove shoes before entering mosques.
-                                Always ask permission before photographing people.</p>
+                            <h5 class="mb-3">Nearby Adventures</h5>
+                            <p>Don't miss Dead Horse Point State Park, Corona Arch, and the Island in the Sky district of Canyonlands.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    
-
-   
 
     <div id="footer"></div>
 
@@ -607,5 +593,3 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-</html>

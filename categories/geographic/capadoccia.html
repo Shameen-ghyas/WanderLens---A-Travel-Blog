@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLens | Lahore, Pakistan</title>
+    <title>WanderLens | Cappadocia, Turkey</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
@@ -32,7 +32,7 @@
             height: 100vh;
             min-height: 700px;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-                url('https://images.pexels.com/photos/2383832/pexels-photo-2383832.jpeg');
+                url('https://images.pexels.com/photos/3889704/pexels-photo-3889704.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -74,7 +74,6 @@
             letter-spacing: 2px;
         }
 
-        /* Scroll Down Arrow */
         .scroll-down {
             position: absolute;
             bottom: 20px;
@@ -189,7 +188,7 @@
 
         .gallery-img {
             border-radius: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 30pxstam;
             transition: all 0.4s ease;
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -300,6 +299,17 @@
             color: var(--primary-color);
         }
 
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
         @media (max-width: 768px) {
             .hero-title {
@@ -331,13 +341,12 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content animate__animated animate__fadeIn">
-            <h1 class="hero-title">Lahore, Pakistan</h1>
-            <p class="hero-subtitle">The Heart of Mughal Heritage & Cultural Grandeur</p>
+            <h1 class="hero-title">Cappadocia</h1>
+            <p class="hero-subtitle">Turkey's Magical Land of Fairy Chimneys and Hot Air Balloons</p>
             <a href="#highlights"
                 class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
-                <i class="fas fa-chevron-down me-2"></i> Explore Lahore
+                <i class="fas fa-chevron-down me-2"></i> Explore Cappadocia
             </a>
-
         </div>
         <a href="#highlights" class="scroll-down">↓</a>
     </section>
@@ -348,15 +357,15 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="/categories/culture.html">Culture & Heritage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Lahore</li>
+                <li class="breadcrumb-item"><a href="/categories/geo.html">Geographic Wonders</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Cappadocia</li>
             </ol>
         </nav>
 
         <!-- Back to category -->
         <div class="mb-4">
-            <a href="/categories/culture.html" class="back-to-category">
-                <i class="fas fa-arrow-left me-2"></i> Back to Culture & Heritage
+            <a href="/categories/geo.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Geographic Wonders
             </a>
         </div>
 
@@ -364,28 +373,20 @@
         <section class="intro-section">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">The Cultural Capital of Pakistan</h2>
-                    <p class="lead fs-4 mb-4">Lahore, the soul of Pakistan, is a living museum of Mughal architecture,
-                        Sufi shrines, and colonial-era buildings..</p>
-                    <p class="fs-5 mb-4">With a history spanning over a millennium, Lahore has been the cultural heart
-                        of the Punjab region. From the grandeur of Badshahi Mosque to the vibrant colors of Heera
-                        Mandi's bazaars, the city offers an intoxicating blend of history, art, and culinary traditions
-                    </p>
-                    <p class="fs-5">Known as the "City of Gardens" for its many Mughal-era gardens, Lahore's food scene
-                        is equally legendary - from sizzling kebabs to the sweet richness of falooda.</p>
+                    <h2 class="section-title">Land of Surreal Landscapes</h2>
+                    <p class="lead fs-4 mb-4">Cappadocia, located in central Turkey, is a geological marvel renowned for its otherworldly rock formations, fairy chimneys, and extensive underground cities carved from volcanic tuff.</p>
+                    <p class="fs-5 mb-4">This UNESCO World Heritage site, shaped by millions of years of erosion, offers a surreal landscape dotted with whimsical rock spires and vast valleys. Its unique terrain has been home to ancient civilizations, leaving behind a rich tapestry of rock-cut churches, monasteries, and subterranean settlements.</p>
+                    <p class="fs-5">Cappadocia is most famous for its sunrise hot air balloon rides, offering breathtaking views of the region's dramatic landscapes bathed in golden light, making it a bucket-list destination for adventurers and photographers alike.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="quick-facts">
                         <h5 class="mb-4 fs-3">Quick Facts</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Location:</strong> Pakistan, South Asia</li>
-                            <li class="list-group-item"><strong>Best Time to Visit:</strong> October-March</li>
-
-                            <li class="list-group-item"><strong>Must-See:</strong> Badshahi Mosque, Lahore Fort, Walled
-                                City</li>
-                            <li class="list-group-item"><strong>Local Dish:</strong> Nihari, Paye, Lahori Chargha
-                            </li>
-                            <li class="list-group-item">Iconic Experience:</strong> Food Street at Gawalmandi</li>
+                            <li class="list-group-item"><strong>Location:</strong> Central Turkey</li>
+                            <li class="list-group-item"><strong>Best Time to Visit:</strong> April to October</li>
+                            <li class="list-group-item"><strong>Elevation:</strong> ~1,000 meters (3,280 ft)</li>
+                            <li class="list-group-item"><strong>Key Feature:</strong> Fairy Chimneys</li>
+                            <li class="list-group-item"><strong>UNESCO Status:</strong> World Heritage Site</li>
                         </ul>
                     </div>
                 </div>
@@ -395,40 +396,33 @@
         <!-- Highlights -->
         <section id="highlights" class="content-section">
             <div class="text-center mb-5">
-                <h2 class="section-title">Cultural Highlights of Lahore</h2>
+                <h2 class="section-title">Wonders of Cappadocia</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://images.pexels.com/photos/12912453/pexels-photo-12912453.jpeg"
-                            class="card-img-top" alt="mosque">
+                        <img src="https://images.pexels.com/photos/33074850/pexels-photo-33074850.jpeg" class="card-img-top" alt="Fairy Chimneys">
                         <div class="card-body">
-                            <h5 class="card-title">Badshahi Mosque</h5>
-                            <p class="card-text">One of the largest mosques in the world, built in 1673 by Emperor
-                                Aurangzeb, capable of holding 100,000 worshippers.</p>
+                            <h5 class="card-title">Fairy Chimneys</h5>
+                            <p class="card-text">Explore the iconic rock formations sculpted by wind and water, creating a surreal landscape of towering spires and conical structures unique to Cappadocia.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://th.bing.com/th/id/R.c595b940adcd9c10fd955bed206d655f?rik=ZjZiDff77YSdVA&riu=http%3a%2f%2fwww.thehistoryhub.com%2fwp-content%2fuploads%2f2014%2f05%2fLahore-Fort-Photos.jpg&ehk=5V%2b3iREc0GpchRWYKal9jira8sLCIXH59dzejX5NZdw%3d&risl=&pid=ImgRaw&r=0"
-                            class="card-img-top" alt="Red Beach">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.cYtNvdKOgde-AcnLD-IREgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Underground Cities">
                         <div class="card-body">
-                            <h5 class="card-title">Lahore Fort</h5>
-                            <p class="card-text">A UNESCO World Heritage Site with stunning Mughal architecture
-                                including the iconic Sheesh Mahal (Mirror Palace).</p>
-
+                            <h5 class="card-title">Underground Cities</h5>
+                            <p class="card-text">Discover ancient subterranean cities like Derinkuyu and Kaymakli, carved deep into the rock, offering refuge to early Christians and Byzantines.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/12/image-17122019-d.jpg"
-                            class="card-img-top" alt="Santorini Sunset">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.zJX6AXEu3RmimRcAQl6xEQHaE5?rs=1&pid=ImgDetMain&o=7&rm=3" class="card-img-top" alt="Goreme Open-Air Museum">
                         <div class="card-body">
-                            <h5 class="card-title">Wagah Border Ceremony</h5>
-                            <p class="card-text">The daily military ceremony at the India-Pakistan border, a spectacle
-                                of patriotic fervor and cultural pride.</p>
+                            <h5 class="card-title">Goreme Open-Air Museum</h5>
+                            <p class="card-text">Visit this UNESCO site featuring rock-cut churches and monasteries adorned with vibrant frescoes dating back to the 10th century.</p>
                         </div>
                     </div>
                 </div>
@@ -439,47 +433,43 @@
         <section class="activities-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title text-white">Top Things to Do</h2>
+                    <h2 class="section-title text-white">Cappadocia Adventures</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-theater-masks"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-parachute-box"></i>
                             </div>
-                            <h5>Festivals</h5>
-                            <p>Experience Basant (kite festival) or the Lahore Literary Festival showcasing regional
-                                arts.</p>
+                            <h5 class="activity-title">Hot Air Balloon Ride</h5>
+                            <p>Soar above Cappadocia’s valleys at sunrise, witnessing fairy chimneys and rock formations bathed in golden light from a unique aerial perspective.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-mosque"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-hiking"></i>
                             </div>
-                            <h5>Sufi Shrines</h5>
-                            <p>Visit Data Darbar, one of South Asia's largest Sufi shrines, especially magical during
-                                Thursday night qawwali.</p>
+                            <h5 class="activity-title">Valley Hiking</h5>
+                            <p>Explore scenic trails through Love Valley, Rose Valley, and Pigeon Valley, surrounded by dramatic rock formations and hidden cave dwellings.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-utensils"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-camera"></i>
                             </div>
-                            <h5 class="activity-title">Food Tours</h5>
-                            <p>Explore the legendary food streets of Gawalmandi and Anarkali, tasting Lahori chargha,
-                                nihari, and paye.</p>
+                            <h5 class="activity-title">Photography</h5>
+                            <p>Capture the surreal beauty of Cappadocia’s landscapes, especially during sunrise when hundreds of balloons dot the sky against a backdrop of fairy chimneys.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-shopping-bag"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-monument"></i>
                             </div>
-                            <h5>Bazaars</h5>
-                            <p>Get lost in the colors of Anarkali Bazaar, home to traditional crafts, textiles, and
-                                Mughal-era jewelry.</p>
+                            <h5 class="activity-title">Historical Tours</h5>
+                            <p>Visit ancient rock-cut churches, monasteries, and underground cities to uncover Cappadocia’s rich Byzantine and early Christian heritage.</p>
                         </div>
                     </div>
                 </div>
@@ -490,20 +480,17 @@
         <section class="gallery-container">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Lahore Through the Lens</h2>
+                    <h2 class="section-title">Cappadocia Gallery</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="https://images.pexels.com/photos/2734406/pexels-photo-2734406.jpeg"
-                            class="img-fluid gallery-img" alt="Santorini Streets">
+                        <img src="https://mapsandmerlot.b-cdn.net/wp-content/uploads/2022/08/MEL02475-1024x683.jpg" class="img-fluid gallery-img" alt="Sunrise Balloons">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://th.bing.com/th/id/R.38f439df3a26778a96a1a0dfcc8c134c?rik=6QeMkt6NVHhqwQ&pid=ImgRaw&r=0"
-                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                        <img src="https://mapsandmerlot.b-cdn.net/wp-content/uploads/2022/08/MEL02561.jpg" class="img-fluid gallery-img" alt="Rock Formations">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.aHBG4W-mWK-KEjTxojMhVAHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"
-                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/48/0d/30/mithra-cave-hotel.jpg?w=700&h=-1&s=1" class="img-fluid gallery-img" alt="Fairy Chimneys">
                     </div>
                 </div>
             </div>
@@ -513,56 +500,49 @@
         <section class="tips-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Travel Tips</h2>
+                    <h2 class="section-title">Essential Travel Tips</h2>
                 </div>
                 <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="tip-card">
+                            <div class="tip-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <h5 class="mb-3">Getting There</h5>
+                            <p>Fly to Kayseri or Nevşehir airports (1-hour drive to Cappadocia). Alternatively, take an overnight bus from Istanbul or Ankara to Göreme, the region’s main hub.</p>
+                        </div>
+                    </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
                                 <i class="fas fa-calendar-alt"></i>
                             </div>
                             <h5 class="mb-3">Best Time to Visit</h5>
-                            <p>October to March offers pleasant weather (15-25°C). Avoid May-June when temperatures
-                                exceed 40°C. Spring (Feb-Mar) is magical during Basant festival.</p>
+                            <p>April to June and September to October offer mild weather and fewer crowds. Summer (July-August) is hot but vibrant, while winter brings snow and a magical ambiance.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-map-marked-alt"></i>
+                                <i class="fas fa-suitcase-rolling"></i>
                             </div>
-                            <h5 class="mb-3">Getting Around</h5>
-                            <p>Use ride-hailing apps (Careem, Uber) or yellow taxis. The Metro Bus covers major routes.
-                                For the Walled City, walking tours are best.</p>
+                            <h5 class="mb-3">Packing Essentials</h5>
+                            <p>Pack comfortable walking shoes for hiking, layers for cool mornings and evenings, a hat and sunscreen for sunny days, and a camera for the stunning landscapes.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hotel"></i>
+                                <i class="fas fa-parachute-box"></i>
                             </div>
-                            <h5 class="mb-3">Where to Stay</h5>
-                            <p>The Mall Road area offers colonial-era luxury hotels. Gulberg has modern options. For
-                                authenticity, consider boutique hotels in the Old City.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 mb-4">
-                        <div class="tip-card">
-                            <div class="tip-icon">
-                                <i class="fas fa-hands-helping"></i>
-                            </div>
-                            <h5 class="mb-3">Cultural Etiquettes</h5>
-                            <p>Dress modestly, especially at religious sites. Remove shoes before entering mosques.
-                                Always ask permission before photographing people.</p>
+                            <h5 class="mb-3">Balloon Ride Tips</h5>
+                            <p>Book hot air balloon rides in advance, especially during peak season. Choose early morning slots for the best views and calm winds. Dress warmly for sunrise flights.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    
-
-   
 
     <div id="footer"></div>
 

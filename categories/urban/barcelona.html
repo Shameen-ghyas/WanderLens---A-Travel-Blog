@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLens | Lahore, Pakistan</title>
+    <title>WanderLens | Barcelona, Spain</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
@@ -32,7 +32,7 @@
             height: 100vh;
             min-height: 700px;
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-                url('https://images.pexels.com/photos/2383832/pexels-photo-2383832.jpeg');
+                url('https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -74,7 +74,6 @@
             letter-spacing: 2px;
         }
 
-        /* Scroll Down Arrow */
         .scroll-down {
             position: absolute;
             bottom: 20px;
@@ -300,6 +299,17 @@
             color: var(--primary-color);
         }
 
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
         @media (max-width: 768px) {
             .hero-title {
@@ -331,13 +341,12 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content animate__animated animate__fadeIn">
-            <h1 class="hero-title">Lahore, Pakistan</h1>
-            <p class="hero-subtitle">The Heart of Mughal Heritage & Cultural Grandeur</p>
+            <h1 class="hero-title">Barcelona</h1>
+            <p class="hero-subtitle">Where Gaudí's Dreams Touch the Mediterranean</p>
             <a href="#highlights"
                 class="btn btn-primary btn-hero animate__animated animate__fadeInUp animate__delay-1s">
-                <i class="fas fa-chevron-down me-2"></i> Explore Lahore
+                <i class="fas fa-chevron-down me-2"></i> Explore Barcelona
             </a>
-
         </div>
         <a href="#highlights" class="scroll-down">↓</a>
     </section>
@@ -348,15 +357,15 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="/categories/culture.html">Culture & Heritage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Lahore</li>
+                <li class="breadcrumb-item"><a href="/categories/urban.html">Urban & Cities</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Barcelona</li>
             </ol>
         </nav>
 
         <!-- Back to category -->
         <div class="mb-4">
-            <a href="/categories/culture.html" class="back-to-category">
-                <i class="fas fa-arrow-left me-2"></i> Back to Culture & Heritage
+            <a href="/categories/urban.html" class="back-to-category">
+                <i class="fas fa-arrow-left me-2"></i> Back to Urban & Cities
             </a>
         </div>
 
@@ -364,28 +373,20 @@
         <section class="intro-section">
             <div class="row align-items-center">
                 <div class="col-lg-8">
-                    <h2 class="section-title">The Cultural Capital of Pakistan</h2>
-                    <p class="lead fs-4 mb-4">Lahore, the soul of Pakistan, is a living museum of Mughal architecture,
-                        Sufi shrines, and colonial-era buildings..</p>
-                    <p class="fs-5 mb-4">With a history spanning over a millennium, Lahore has been the cultural heart
-                        of the Punjab region. From the grandeur of Badshahi Mosque to the vibrant colors of Heera
-                        Mandi's bazaars, the city offers an intoxicating blend of history, art, and culinary traditions
-                    </p>
-                    <p class="fs-5">Known as the "City of Gardens" for its many Mughal-era gardens, Lahore's food scene
-                        is equally legendary - from sizzling kebabs to the sweet richness of falooda.</p>
+                    <h2 class="section-title">Catalan Capital of Creativity</h2>
+                    <p class="lead fs-4 mb-4">A sun-drenched metropolis where Gothic Quarter's medieval alleys meet Gaudí's surreal architecture and golden beaches stretch beneath mountain vistas.</p>
+                    <p class="fs-5 mb-4">This Mediterranean gem pulses with Catalan pride - from human towers in Plaça Sant Jaume to the flavors of paella and vermouth. The unfinished Sagrada Família's spires pierce the skyline, while the tree-lined Ramblas buzz with street performers.</p>
+                    <p class="fs-5">Whether marveling at Picasso's early works or dancing till dawn in Poble-sec, Barcelona seduces with its perfect blend of culture and coastline.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="quick-facts">
                         <h5 class="mb-4 fs-3">Quick Facts</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Location:</strong> Pakistan, South Asia</li>
-                            <li class="list-group-item"><strong>Best Time to Visit:</strong> October-March</li>
-
-                            <li class="list-group-item"><strong>Must-See:</strong> Badshahi Mosque, Lahore Fort, Walled
-                                City</li>
-                            <li class="list-group-item"><strong>Local Dish:</strong> Nihari, Paye, Lahori Chargha
-                            </li>
-                            <li class="list-group-item">Iconic Experience:</strong> Food Street at Gawalmandi</li>
+                            <li class="list-group-item"><strong>Country:</strong> Spain (Catalonia)</li>
+                            <li class="list-group-item"><strong>Best Time to Visit:</strong> May-Jun & Sept-Oct</li>
+                            <li class="list-group-item"><strong>Population:</strong> 1.6 million</li>
+                            <li class="list-group-item"><strong>Famous For:</strong> Gaudí, football, beaches</li>
+                            <li class="list-group-item"><strong>Iconic Landmark:</strong> Sagrada Família</li>
                         </ul>
                     </div>
                 </div>
@@ -395,40 +396,36 @@
         <!-- Highlights -->
         <section id="highlights" class="content-section">
             <div class="text-center mb-5">
-                <h2 class="section-title">Cultural Highlights of Lahore</h2>
+                <h2 class="section-title">Barcelona's Masterpieces</h2>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://images.pexels.com/photos/12912453/pexels-photo-12912453.jpeg"
-                            class="card-img-top" alt="mosque">
+                        <img src="https://cdn.britannica.com/15/194815-050-08B5E7D1/Nativity-facade-Sagrada-Familia-cathedral-Barcelona-Spain.jpg"
+                            class="card-img-top" alt="Sagrada Família">
                         <div class="card-body">
-                            <h5 class="card-title">Badshahi Mosque</h5>
-                            <p class="card-text">One of the largest mosques in the world, built in 1673 by Emperor
-                                Aurangzeb, capable of holding 100,000 worshippers.</p>
+                            <h5 class="card-title">Sagrada Família</h5>
+                            <p class="card-text">Gaudí's unfinished basilica with organic spires and kaleidoscopic stained glass since 1882.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://th.bing.com/th/id/R.c595b940adcd9c10fd955bed206d655f?rik=ZjZiDff77YSdVA&riu=http%3a%2f%2fwww.thehistoryhub.com%2fwp-content%2fuploads%2f2014%2f05%2fLahore-Fort-Photos.jpg&ehk=5V%2b3iREc0GpchRWYKal9jira8sLCIXH59dzejX5NZdw%3d&risl=&pid=ImgRaw&r=0"
-                            class="card-img-top" alt="Red Beach">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.VYp1-jrJyAq8fhxcKYVMNAHaE0?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            class="card-img-top" alt="Park Güell">
                         <div class="card-body">
-                            <h5 class="card-title">Lahore Fort</h5>
-                            <p class="card-text">A UNESCO World Heritage Site with stunning Mughal architecture
-                                including the iconic Sheesh Mahal (Mirror Palace).</p>
-
+                            <h5 class="card-title">Park Güell</h5>
+                            <p class="card-text">Whimsical mosaic-covered terraces with panoramic city views.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="highlight-card">
-                        <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/12/image-17122019-d.jpg"
-                            class="card-img-top" alt="Santorini Sunset">
+                        <img src="https://th.bing.com/th/id/R.cabafa15de7bf42247edc024687924d5?rik=0n0jz5Ewzn3r%2bw&pid=ImgRaw&r=0"
+                            class="card-img-top" alt="La Boqueria">
                         <div class="card-body">
-                            <h5 class="card-title">Wagah Border Ceremony</h5>
-                            <p class="card-text">The daily military ceremony at the India-Pakistan border, a spectacle
-                                of patriotic fervor and cultural pride.</p>
+                            <h5 class="card-title">La Boqueria</h5>
+                            <p class="card-text">Colorful food market with jamón ibérico stalls and fresh juices since 1840.</p>
                         </div>
                     </div>
                 </div>
@@ -439,47 +436,43 @@
         <section class="activities-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title text-white">Top Things to Do</h2>
+                    <h2 class="section-title text-white">Barcelona Experiences</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-theater-masks"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-archway"></i>
                             </div>
-                            <h5>Festivals</h5>
-                            <p>Experience Basant (kite festival) or the Lahore Literary Festival showcasing regional
-                                arts.</p>
+                            <h5 class="activity-title">Gaudí Trail</h5>
+                            <p>Casa Batlló's dragon roof and La Pedrera's undulating facade.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-mosque"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-umbrella-beach"></i>
                             </div>
-                            <h5>Sufi Shrines</h5>
-                            <p>Visit Data Darbar, one of South Asia's largest Sufi shrines, especially magical during
-                                Thursday night qawwali.</p>
+                            <h5 class="activity-title">Beach Life</h5>
+                            <p>Barceloneta's seafood paella and Bogatell's volleyball games.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-utensils"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-futbol"></i>
                             </div>
-                            <h5 class="activity-title">Food Tours</h5>
-                            <p>Explore the legendary food streets of Gawalmandi and Anarkali, tasting Lahori chargha,
-                                nihari, and paye.</p>
+                            <h5 class="activity-title">Camp Nou</h5>
+                            <p>FC Barcelona's stadium tour and museum for football fans.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mb-4">
                         <div class="activity-card">
-                            <div class="fact-icon">
-                                <i class="fas fa-shopping-bag"></i>
+                            <div class="activity-icon">
+                                <i class="fas fa-wine-glass-alt"></i>
                             </div>
-                            <h5>Bazaars</h5>
-                            <p>Get lost in the colors of Anarkali Bazaar, home to traditional crafts, textiles, and
-                                Mughal-era jewelry.</p>
+                            <h5 class="activity-title">Tapas Crawl</h5>
+                            <p>Pintxos in Gràcia and vermouth in El Born's hidden bodegas.</p>
                         </div>
                     </div>
                 </div>
@@ -490,20 +483,20 @@
         <section class="gallery-container">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Lahore Through the Lens</h2>
+                    <h2 class="section-title">Barcelona in Frames</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="https://images.pexels.com/photos/2734406/pexels-photo-2734406.jpeg"
-                            class="img-fluid gallery-img" alt="Santorini Streets">
+                        <img src="https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg"
+                            class="img-fluid gallery-img" alt="Sagrada Família">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://th.bing.com/th/id/R.38f439df3a26778a96a1a0dfcc8c134c?rik=6QeMkt6NVHhqwQ&pid=ImgRaw&r=0"
-                            class="img-fluid gallery-img" alt="Santorini Architecture">
+                        <img src="https://images.pexels.com/photos/54308/man-fan-person-football-54308.jpeg"
+                            class="img-fluid gallery-img" alt="Gothic Quarter">
                     </div>
                     <div class="col-md-4">
-                        <img src="https://tse1.mm.bing.net/th/id/OIP.aHBG4W-mWK-KEjTxojMhVAHaE9?rs=1&pid=ImgDetMain&o=7&rm=3"
-                            class="img-fluid gallery-img" alt="Santorini Windmill">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/ba/77/7f/caption.jpg?w=1200&h=1200&s=1"
+                            class="img-fluid gallery-img" alt="Barceloneta Beach">
                     </div>
                 </div>
             </div>
@@ -513,59 +506,53 @@
         <section class="tips-section">
             <div class="container">
                 <div class="text-center mb-5">
-                    <h2 class="section-title">Travel Tips</h2>
+                    <h2 class="section-title">Essential Tips</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-calendar-alt"></i>
+                                <i class="fas fa-ticket-alt"></i>
                             </div>
-                            <h5 class="mb-3">Best Time to Visit</h5>
-                            <p>October to March offers pleasant weather (15-25°C). Avoid May-June when temperatures
-                                exceed 40°C. Spring (Feb-Mar) is magical during Basant festival.</p>
+                            <h5 class="mb-3">Skip-the-Line Tickets</h5>
+                            <p>Book Sagrada Família/Park Güell tickets online to avoid 3+ hour queues.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-map-marked-alt"></i>
+                                <i class="fas fa-language"></i>
                             </div>
-                            <h5 class="mb-3">Getting Around</h5>
-                            <p>Use ride-hailing apps (Careem, Uber) or yellow taxis. The Metro Bus covers major routes.
-                                For the Walled City, walking tours are best.</p>
+                            <h5 class="mb-3">Local Phrases</h5>
+                            <p>"Bon dia" (Good morning) and "Gràcies" (Thank you) in Catalan go far.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hotel"></i>
+                                <i class="fas fa-utensils"></i>
                             </div>
-                            <h5 class="mb-3">Where to Stay</h5>
-                            <p>The Mall Road area offers colonial-era luxury hotels. Gulberg has modern options. For
-                                authenticity, consider boutique hotels in the Old City.</p>
+                            <h5 class="mb-3">Dining Times</h5>
+                            <p>Lunch at 2-4pm, dinner after 9pm. Many kitchens close between meals.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 mb-4">
                         <div class="tip-card">
                             <div class="tip-icon">
-                                <i class="fas fa-hands-helping"></i>
+                                <i class="fas fa-subway"></i>
                             </div>
-                            <h5 class="mb-3">Cultural Etiquettes</h5>
-                            <p>Dress modestly, especially at religious sites. Remove shoes before entering mosques.
-                                Always ask permission before photographing people.</p>
+                            <h5 class="mb-3">Transport Pass</h5>
+                            <p>T-10 ticket gives 10 metro/bus rides cheaper than single tickets.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    
-
-   
 
     <div id="footer"></div>
 
+    <!-- Same JavaScript as original template -->
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -607,5 +594,3 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-</html>
